@@ -1,14 +1,36 @@
 <% provide(:title, "Home") %>
 
-    <header class="navbar navbar-fixed-left navbar-inverse">
-      <div class="container">
-        <%= link_to "sample app", '#', id: "logo" %>
-        <nav>
-          <ul class="nav navbar-nav navbar-left">
-            <li><%= link_to "Home",   '#' %></li>
-            <li><%= link_to "Help",   '#' %></li>
-            <li><%= link_to "Log in", '#' %></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<body id="home">
+
+    <div class="wrapper">
+
+        <header>
+
+          <h1 class="logo"><a href="">Nav</a></h1>
+
+          <a class="to_nav" href="#primary_nav">Menu</a>
+
+        </header>
+
+
+
+        <footer>
+
+            <p>Copyright &copy;2012 Ian Yates <a href="http://webdesign.tutsplus.com">Webdesigntuts+</a></p>
+
+        </footer>
+
+        <nav id="primary_nav">
+
+            <ul>
+
+              <li><%= link_to "About",   '#' %></li>
+              <li><%= link_to "Location",   '#' %></li>
+              <li><%= link_to "Gallery", '#' %></li>
+              <li><%= link_to "Reservations", '#' %></li>
+
+            </ul>
+
+        </nav><!--end primary_nav-->
+
+    </div><!--end wrapper-->
