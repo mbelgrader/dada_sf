@@ -190,7 +190,7 @@ footer {
         display: table-cell;
         background: none;
         width: 75%;
-        background-image: url("bar3.jpg");
+        background: image-url("bar3.jpg");
         background-size: cover;
 
     }
@@ -212,7 +212,7 @@ footer {
     }
 
     #desktop_logo {
-      background-image: url("dada_logo.jpg");
+      background: image-url("dada_logo.jpg");
       background-size: cover;
       z-index: 1;
       height: 200px;
