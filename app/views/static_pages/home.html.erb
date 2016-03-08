@@ -1,36 +1,48 @@
-<% provide(:title, "Home") %>
+<html lang="en">
+<head>
 
-<body id="home">
+    <meta charset="utf-8">
+    <title>Dada SF</title>
+    <meta name="description" content="Dada Bar SF">
+    <meta name="author" content="Maria Belgrader">
 
-    <div class="wrapper">
+    <!--Mobile specific meta goodness :)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <!--css-->
+    <link rel="stylesheet" href="styles.css">
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+</head>
+<body>
         <header>
-
-          <h1 class="logo"><a href="">Nav</a></h1>
-
+          <h1 class="logo"><a href="">DaDa</a></h1>
           <a class="to_nav" href="#primary_nav">Menu</a>
-
         </header>
 
-
-
-        <footer>
-
-            <p>Copyright &copy;2012 Ian Yates <a href="http://webdesign.tutsplus.com">Webdesigntuts+</a></p>
-
-        </footer>
+        <div class="container">
+          <div class="sidebar"></div>
+            <div class="image">
+              <img id="mobile_image" src="http://fireworksonjuly4th.com/images/venues/3088_image_3.jpg">
+            </div>
+        </div>
 
         <nav id="primary_nav">
-
+            <div id="desktop_logo"><div>
             <ul>
-
               <li><%= link_to "About",   '#' %></li>
               <li><%= link_to "Location",   '#' %></li>
               <li><%= link_to "Gallery", '#' %></li>
               <li><%= link_to "Reservations", '#' %></li>
-
+              <li class="top"><a href="#home">Top</a></li>
             </ul>
+        </nav>
 
-        </nav><!--end primary_nav-->
-
-    </div><!--end wrapper-->
+</body>
+</html>
