@@ -32,6 +32,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
+    background: none;
 }
 ol, ul {
     list-style: none;
@@ -205,43 +206,34 @@ footer {
   height: 400px;
 }
 
+.sidebar {
+  display: none;
+}
 
 @media only screen and (min-width: 768px) {
 
-    a.to_nav {
-        display: none;
+    .sidebar {
+      display: block;
+      position: fixed;
+      left: 0;
+      top: 0;
+
     }
 
-    .wrapper {
-        position: relative;
-        width: 768px;
-        margin: auto;
+    .jumbotron {
+      margin-left: 200px;
     }
 
-    #primary_nav {
-        position: absolute;
-        top: 5px;
-        right: 10px;
-        background: none;
+    .content {
+      position: fixed;
+      left: 400px;
     }
 
-    #primary_nav li {
-        display: inline;
-    }
-
-    #primary_nav li a {
-        float: left;
-        border: none;
-        padding: 0 10px;
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        border-radius: 2px;
-    }
-
-}
-
-    #primary_nav li.top {
-        display: none;
+    .desktop_logo {
+      position: fixed;
+      top: 15px;
+      left: 25px;
+      z-index: 1;
     }
 
     footer {
@@ -250,3 +242,52 @@ footer {
         text-align: center;
         font-size: 14px;
     }
+
+    a.to_nav {
+        display: none;
+    }
+
+    header {
+      display: none;
+    }
+
+    .wrapper {
+        position: relative;
+        margin: auto;
+    }
+
+    #primary_nav {
+        position: absolute;
+        top: 300px;
+        left: 50px;
+        background: none;
+    }
+    #primary_nav ul {
+      background: none;
+    }
+/*
+    #primary_nav li {
+        display: inline;
+    }
+*/
+    #primary_nav li a {
+        font-size: 1.4em;
+        float: left;
+        border: none;
+        padding: 0 10px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+    }
+
+    #primary_nav li.top {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+  .desktop_logo {
+    display: none;
+  }
+}

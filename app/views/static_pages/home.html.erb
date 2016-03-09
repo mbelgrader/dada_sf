@@ -1,15 +1,25 @@
 
 <body id="home">
 
+
+
     <div class="wrapper">
 
         <header>
 
-            <h1 class="logo"><a href="">Nav</a></h1>
+            <h1 class="logo"><a href="">Dada</a></h1>
 
             <a class="to_nav" href="#primary_nav">Menu</a>
 
         </header>
+
+        <div class="desktop_logo">
+          <%= image_tag src="dada_logo.jpg", width: '250', height: '250' %>
+        </div>
+
+        <div class="sidebar">
+          <%= image_tag src="sidebar.jpeg" %>
+        </div>
 
 
         <div class="jumbotron">
@@ -17,28 +27,20 @@
         </div>
 
         <div class="content">
-          <p>About Dada</p>
+          <p>About Dada (address)</p>
           </br>
-          <p>Book a reservation or private party</p>
+          <p>Book a reservation or private party (Contact info)</p>
         </div>
 
         <nav id="primary_nav">
 
-            <ul>
-
-                <li><a href="">Portfolio</a></li>
-
-                <li><a href="">About Me</a></li>
-
-                <li><a href="">Nonsense</a></li>
-
-                <li><a href="">Services</a></li>
-
-                <li><a href="">Contact</a></li>
-
-                <li class="top"><a href="#home">Top</a></li>
-
-            </ul>
+          <ul>
+            <li><%= link_to "About",   '#' %></li>
+            <li><%= link_to "Location",   '#' %></li>
+            <li><%= link_to "Gallery", '#' %></li>
+            <li><%= link_to "Reservations", '#' %></li>
+            <li class="top"><a href="#home">Top</a></li>
+          </ul>
 
         </nav><!--end primary_nav-->
 
