@@ -1,3 +1,4 @@
+@import "bootstrap";
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0b1 | 201101
@@ -32,23 +33,81 @@ footer, header, hgroup, menu, nav, section {
 body {
     line-height: 1;
 }
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
 
 /*begin our styles*/
 
 body {
     font: 16px/1.4em 'PT Sans', sans-serif;;
-      background: image-url("bar3-1.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
+    color: #1c1c1c;
+}
+
+p,
+ul {
+    margin: 0 0 1.5em;
+}
+
+ul {
+    list-style: disc;
+    padding: 0 0 0 20px;
+}
+
+a {
+    color: #1D745A;
+}
+
+h1 {
+
+}
+
+h2 {
+    font-family: 'PT Serif', serif;
+    font-size: 32px;
+    line-height: 1.4em;
+    margin: 0 0 .4em;
+    font-weight: bold;
+}
+
+/*layout*/
+
+.wrapper {
+}
+
+article {
+    border-bottom: 1px solid #d8d8d8;
+    padding: 10px 20px 0 20px;
+    margin: 10px 0;
 }
 
 /*header*/
 
 header {
-
     background: #1c1c1c;
     padding: 15px 20px;
-    width: 595;
 }
 
         /*shorter clearfix http://nicolasgallagher.com/micro-clearfix-hack/*/
@@ -104,17 +163,15 @@ a.to_nav:focus {
 /*navigation*/
 
 #primary_nav ul {
-
     list-style: none;
     background: #1c1c1c;
     padding: 5px 0;
-    width: 595;
 }
 
 #primary_nav li a {
     display: block;
     padding: 0 20px;
-    color: #d8d8d8;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
@@ -123,7 +180,6 @@ a.to_nav:focus {
     line-height: 2em;
     height: 2em;
     border-bottom: 1px solid #383838;
-      width: 595;
 }
 
 #primary_nav li:last-child a {
@@ -132,141 +188,65 @@ a.to_nav:focus {
 
 #primary_nav li a:hover,
 #primary_nav li a:focus {
-    color: white;
+    color: #1c1c1c;
+    background: #ccc;
 }
 
+/*footer*/
 
-
-.container
-{
-    display:table;
-    width: 100%;
-    height: 100%;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-
+footer {
+    display: none;
 }
 
 .jumbotron {
-
+  background: image-url("bar3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 400px;
-
 }
-/*footer*/
-/*
-footer {
-    font-family: 'PT Serif', serif;
-    font-style: italic;
-    text-align: center;
-    font-size: 14px;
-}
-*/
-
-/*media queries*/
 
 
 @media only screen and (min-width: 768px) {
-
-    html,body,.container
-    {
-        height:100%;
-
-    }
 
     a.to_nav {
         display: none;
     }
 
-    .container
-    {
-        display:table;
-        width: 100%;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-
-    }
-    header
-    {
-        background: black;
-    }
-
-
-    /*
-    .col-md-3.no-float, .col-md-9.no-float {
-        float: none;
-    }
-    */
-    .sidebar
-    {
-        display: table-cell;
-        background: image-url("sidebar.jpeg");;
-        width: 300px;
-        table-layout: fixed;
-        border-right: solid black 5px;
-
-    }
-    .image
-    {
-        display: table-cell;
-        background: image-url("bar3-1.jpg");
-        background-size: cover;
-    }
-
-    header {
-      display: none;
-    }
-
-    h1.logo a {
-        color: #d8d8d8;
-        text-decoration: none;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 20px;
-    }
-
-    #mobile_image {
-      display:none;
-    }
-
-    #desktop_logo {
-      background: image-url("dada_logo.jpg");
-      background-size: cover;
-      z-index: 1;
-      height: 200px;
-      width: 200px;
-      display: relative;
-      left: 20px;
+    .wrapper {
+        position: relative;
+        width: 768px;
+        margin: auto;
     }
 
     #primary_nav {
-      position: absolute;
-      top: 5px;
-      left: 5px;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        background: none;
     }
-/*
+
     #primary_nav li {
         display: inline;
     }
-*/
-
-#primary_nav ul {
-    background: none;
-}
 
     #primary_nav li a {
-        color: #d8d8d8;
         float: left;
         border: none;
-        padding: 0 40px;
-        position: relative;
-        top: 200px;
+        padding: 0 10px;
         -webkit-border-radius: 2px;
         -moz-border-radius: 2px;
         border-radius: 2px;
     }
 
+}
+
     #primary_nav li.top {
         display: none;
     }
 
-}
+    footer {
+        font-family: 'PT Serif', serif;
+        font-style: italic;
+        text-align: center;
+        font-size: 14px;
+    }
