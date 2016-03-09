@@ -43,8 +43,10 @@ body {
 /*header*/
 
 header {
+
     background: #1c1c1c;
     padding: 15px 20px;
+    width: 595;
 }
 
         /*shorter clearfix http://nicolasgallagher.com/micro-clearfix-hack/*/
@@ -100,9 +102,11 @@ a.to_nav:focus {
 /*navigation*/
 
 #primary_nav ul {
+
     list-style: none;
     background: #1c1c1c;
     padding: 5px 0;
+    width: 595;
 }
 
 #primary_nav li a {
@@ -117,6 +121,7 @@ a.to_nav:focus {
     line-height: 2em;
     height: 2em;
     border-bottom: 1px solid #383838;
+      width: 595;
 }
 
 #primary_nav li:last-child a {
@@ -129,10 +134,10 @@ a.to_nav:focus {
 }
 
 #mobile_image {
-  background: image-url("bar3-1.jpg");
-  background-size: cover;
-  width: 100%;
-  height: 300px;
+  height: 433;
+  width: 595;
+
+
 }
 
 .container
@@ -143,6 +148,7 @@ a.to_nav:focus {
     box-sizing: border-box;
 
 }
+
 /*footer*/
 /*
 footer {
@@ -154,6 +160,7 @@ footer {
 */
 
 /*media queries*/
+
 
 @media only screen and (min-width: 768px) {
 
