@@ -1,56 +1,15 @@
+<div class="wrapper">
 
-<body id="home">
+  <%= render 'layouts/header' %>
 
+  <div class="jumbotron"></div>
 
+  <div class="content">
+    <p>Dada (hours)</p>
+      </br>
+    <p>Book a reservation or private party (Contact info)</p>
+  </div>
 
-    <div class="wrapper">
+  <%= render 'layouts/nav' %>
 
-        <header>
-
-            <h1 class="logo"><a href="">Dada</a></h1>
-
-            <a class="to_nav" href="#primary_nav">Menu</a>
-
-        </header>
-
-        <div class="desktop_logo">
-          <%= image_tag src="dada_logo.jpg", width: '250', height: '250' %>
-        </div>
-
-        <div class="sidebar">
-          <%= image_tag src="sidebar.jpeg" %>
-        </div>
-
-
-        <div class="jumbotron">
-
-        </div>
-
-        <div class="content">
-          <p>About Dada (address)</p>
-          </br>
-          <p>Book a reservation or private party (Contact info)</p>
-        </div>
-
-        <nav id="primary_nav">
-
-          <ul>
-            <li><%= link_to "About",   '#' %></li>
-            <li><%= link_to "Location",   '#' %></li>
-            <li><%= link_to "Gallery", '#' %></li>
-            <li><%= link_to "Reservations", '#' %></li>
-            <li class="top"><a href="#home">Top</a></li>
-          </ul>
-
-        </nav><!--end primary_nav-->
-
-    </div><!--end wrapper-->
-
-    <footer>
-
-        <p>Copyright &copy;2012 Ian Yates <a href="http://webdesign.tutsplus.com">Webdesigntuts+</a></p>
-
-    </footer>
-
-</body>
-</html>
+</div><!--end wrapper-->

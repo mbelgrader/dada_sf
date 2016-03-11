@@ -189,14 +189,8 @@ a.to_nav:focus {
 
 #primary_nav li a:hover,
 #primary_nav li a:focus {
-    color: #1c1c1c;
-    background: #ccc;
-}
-
-/*footer*/
-
-footer {
-    display: none;
+    color: gray;
+    background: none;
 }
 
 .jumbotron {
@@ -236,13 +230,14 @@ footer {
       z-index: 1;
     }
 
+/*
     footer {
         font-family: 'PT Serif', serif;
         font-style: italic;
         text-align: center;
         font-size: 14px;
     }
-
+*/
     a.to_nav {
         display: none;
     }
@@ -250,6 +245,7 @@ footer {
     header {
       display: none;
     }
+
 
     .wrapper {
         position: relative;
@@ -284,10 +280,22 @@ footer {
         display: none;
     }
 
+    #primary_nav li a:hover,
+    #primary_nav li a:focus {
+        color: gray;
+        background: none;
+    }
+
+
+
 }
 
 @media only screen and (max-width: 767px) {
   .desktop_logo {
     display: none;
+  }
+
+  footer {
+      display: none;
   }
 }
