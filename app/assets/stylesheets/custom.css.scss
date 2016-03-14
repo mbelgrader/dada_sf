@@ -207,7 +207,7 @@ a.to_nav:focus {
 .jumbotron {
   background: image-url("bar3-1.jpg");
   background-repeat: no-repeat;
-  min-height: 700px;
+  min-height: 1000px;
   background-size: 100% 100%;
 
 }
@@ -304,6 +304,10 @@ a.to_nav:focus {
     section .row img {
       margin: 20px -80px 20px;
       width: 100%;
+    }
+
+    #mobile_nav {
+      display: none;
     }
 
 }
