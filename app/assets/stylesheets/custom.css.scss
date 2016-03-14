@@ -207,7 +207,7 @@ a.to_nav:focus {
 .jumbotron {
   background: image-url("bar3-1.jpg");
   background-repeat: no-repeat;
-  min-height: 1000px;
+  min-height: 820px;
   background-size: 100% 100%;
 
 }
@@ -224,9 +224,6 @@ a.to_nav:focus {
 }
 
 @media only screen and (min-width: 768px) {
-    .content {
-      display: none;
-    }
 
     .sidebar {
       display: block;
