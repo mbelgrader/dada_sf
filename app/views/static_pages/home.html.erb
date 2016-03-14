@@ -1,13 +1,34 @@
 <div class="wrapper">
 
-  <%= render 'layouts/header' %>
-
-  <section class="jumbotron"></section>
-
-  <div class="content">
-
-
+  <div id="sidebar-wrapper">
+      <%= render 'layouts/header' %>
   </div>
+
+
+
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12">
+                      <!-- content of page -->
+                      <section class="jumbotron"></section>
+                      <div id="content">
+                        <%= render 'layouts/hours' %>
+                        <p>Dada</p>
+                        <p>Dada</p>
+                        <p>Dada</p>
+                        <p>Dada</p>
+                        <p>Dada</p>
+                        <p>Dada</p>
+                        <p>Dada</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+
+
+
+
 
   <div id="mobile_nav">
     <%= render 'layouts/nav' %>

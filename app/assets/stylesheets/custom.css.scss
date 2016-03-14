@@ -207,9 +207,9 @@ a.to_nav:focus {
 .jumbotron {
   background: image-url("bar3-1.jpg");
   background-repeat: no-repeat;
-  min-height: 820px;
+  min-height: 500px;
+  width: 100%;
   background-size: 100% 100%;
-
 }
 
 .sidebar {
@@ -223,7 +223,29 @@ a.to_nav:focus {
   width: 20px;
 }
 
+.container {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 @media only screen and (min-width: 768px) {
+
+
+
+  #sidebar-wrapper {
+
+    margin-left: -250px;
+    left: 250px;
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    z-index: 1000;
+  }
+
+    #content {
+      margin-left: 350px;
+    }
+
 
     .sidebar {
       display: block;
@@ -235,7 +257,7 @@ a.to_nav:focus {
     }
 
     .jumbotron {
-      margin-left: 200px;
+      margin-left: 300px;
     }
 
     .content {
@@ -262,6 +284,7 @@ a.to_nav:focus {
     .wrapper {
         position: relative;
         margin: auto;
+
     }
 
     #primary_nav {
@@ -318,13 +341,13 @@ a.to_nav:focus {
     background: image-url("home_drinks.jpg");
     background-repeat: no-repeat;
     min-height: 200px;
+    width: 100%;
     background-size: 100% 100%;
-  }
+}
 
   section .row img {
   margin: 0 0 20px;
   width: 100%;
   }
-
 
 }
