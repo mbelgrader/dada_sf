@@ -5,9 +5,39 @@
   <%= render 'layouts/header' %>
 
   <div class="content">
-    <h1>Address</h1>
-    </br>
-    <p>map api</p>
+
+    <section class="container">
+
+      <div class="row">
+
+        <div class="col-sm-6">
+         <%=image_tag src="dada_sign.jpg" %>
+        </div>
+
+        <div class="col-sm-6">
+         <%=image_tag src="dada_sign.jpg" %>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+
+        <div class="col-sm-6">
+          <h2>Location:</h2>
+          <p>65 Post St
+          <br>(Btwn Montgomery and Kearny)
+          <br>San Francisco, CA 94104
+          <br>(415) 357-1367
+         </p>
+        </div>
+
+        <div class="col-sm-6">
+        <%= render "layouts/hours" %>
+        </div>
+      </div>
+
+    </section>
   </div>
 
   <%= render 'layouts/nav' %>

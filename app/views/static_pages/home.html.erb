@@ -2,12 +2,14 @@
 
   <%= render 'layouts/header' %>
 
-  <div class="jumbotron"></div>
+  <section class="jumbotron"></section>
 
   <div class="content">
-    <p>Dada (hours)</p>
-      </br>
-    <p>Book a reservation or private party (Contact info)</p>
+
+    <div class="col-sm-12">
+      <%= render "layouts/hours" %>
+    </div>
+
   </div>
 
   <%= render 'layouts/nav' %>

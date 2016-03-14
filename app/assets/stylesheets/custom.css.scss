@@ -6,7 +6,7 @@
    USE WITH CAUTION AND TEST WITH ABANDON */
 
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, p, blockquote,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -81,18 +81,29 @@ a {
     color: #1D745A;
 }
 
+/* mobile header */
 h1 {
-
+  font-family: 'PT Serif', serif;
+  font-size: 20px;
+  line-height: 1.4em;
+  margin: 0 0 .4em;
+  font-weight: bold;
 }
 
+/* page headings */
 h2 {
     font-family: 'PT Serif', serif;
-    font-size: 32px;
+    font-size: 20px;
     line-height: 1.4em;
     margin: 0 0 .4em;
     font-weight: bold;
 }
 
+.hours {
+  background: none;
+  border: none;
+  font: 16px/1.4em 'PT Sans', sans-serif;
+}
 /*layout*/
 
 .wrapper {
@@ -127,7 +138,7 @@ header {
             zoom:1;
         }
 
-h1.logo a {
+h1.logo {
     color: #d8d8d8;
     text-decoration: none;
     font-weight: bold;
@@ -194,20 +205,32 @@ a.to_nav:focus {
 }
 
 .jumbotron {
-  background: image-url("bar3.jpg");
+  background: image-url("bar3-1.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 400px;
+  min-height: 700px;
+  background-size: 100% 100%;
+
 }
 
 .sidebar {
   display: none;
 }
 
+/* location */
+
+.sign {
+  height: 20px;
+  width: 20px;
+}
+
 @media only screen and (min-width: 768px) {
+    .content {
+      display: none;
+    }
 
     .sidebar {
       display: block;
+      height: 100%;
       position: fixed;
       left: 0;
       top: 0;
@@ -230,14 +253,6 @@ a.to_nav:focus {
       z-index: 1;
     }
 
-/*
-    footer {
-        font-family: 'PT Serif', serif;
-        font-style: italic;
-        text-align: center;
-        font-size: 14px;
-    }
-*/
     a.to_nav {
         display: none;
     }
@@ -254,7 +269,7 @@ a.to_nav:focus {
 
     #primary_nav {
         position: absolute;
-        top: 300px;
+        top: 350px;
         left: 50px;
         background: none;
     }
@@ -286,7 +301,10 @@ a.to_nav:focus {
         background: none;
     }
 
-
+    section .row img {
+      margin: 20px -80px 20px;
+      width: 100%;
+    }
 
 }
 
@@ -295,7 +313,17 @@ a.to_nav:focus {
     display: none;
   }
 
-  footer {
-      display: none;
+  .jumbotron {
+    background: image-url("home_drinks.jpg");
+    background-repeat: no-repeat;
+    min-height: 200px;
+    background-size: 100% 100%;
   }
+
+  section .row img {
+  margin: 0 0 20px;
+  width: 100%;
+  }
+
+
 }
