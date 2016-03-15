@@ -65,6 +65,7 @@ table {
 body {
     font: 16px/1.4em 'PT Sans', sans-serif;;
     color: #1c1c1c;
+    background-color: black;
 }
 
 p,
@@ -113,7 +114,7 @@ h2 {
 /*layout*/
 
 .wrapper {
-  background-color: black;
+
 }
 
 article {
@@ -244,6 +245,10 @@ a.to_nav:focus {
    width: 100%;
  }
 
+ #content {
+   text-align: center;
+ }
+
 @media only screen and (min-width: 768px) {
 
 
@@ -347,6 +352,10 @@ a.to_nav:focus {
       display: none;
     }
 
+    .mobile {
+      display: none;
+    }
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -370,5 +379,9 @@ a.to_nav:focus {
   .dada_sign {
     width: 100%;
   }
+
+.desktop {
+  display: none;
+}
 
 }
