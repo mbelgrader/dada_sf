@@ -6,18 +6,20 @@
       <%= render 'layouts/header' %>
   </div>
 
-
-
           <div class="container-fluid">
               <div class="row">
                   <div class="col-md-12">
                       <!-- content of page -->
                       <div id="content">
-                          <%= image_tag src="dada_sign.jpg", class: "dada_sign" %>
+                          <div id="sign-container">
+                        <!--   <%= image_tag src="dada_sign.jpg", class: "dada_sign" %> -->
+                          </div>
 
                           <div id="map-container">
                             <div id="map-canvas"></div>
                           </div>
+
+                          <br>
 
 
                         <div class="row">
@@ -43,12 +45,8 @@
           </div>
 
 
-
-
-
-
-
-
-  <%= render 'layouts/nav' %>
+  <div id="mobile_nav">
+    <%= render 'layouts/nav' %>
+  </div>
 
 </div><!--end wrapper-->
