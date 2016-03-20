@@ -5,7 +5,7 @@
 
   <div class="row">
     <div class="col-md-6" style="color:black">
-      <h1 style="text-align:center">Reserve a Table</h1>
+      <h1 style="text-align:center">Reserve a Section</h1>
       <p style="text-align:center">Minimum guests: 8</p>
 
       <%= form_for(Contact.new) do |f| %>
@@ -31,5 +31,41 @@
       <% end %>
     </div>
   </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-md-6" style="color:black">
+      <h1 style="text-align:center">Book a Private Party</h1>
+      <p style="text-align:center">
+        Bar minimum will be required <br>
+        Please include information about the type of event</p>
+
+      <%= form_for(Contact.new) do |f| %>
+        <%= f.label :name%>
+        <%= f.text_field :name %>
+
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+
+        <%= f.label :phone %>
+        <%= f.number_field :phone %>
+
+        <%= f.label :guests %>
+        <%= f.number_field :guests %>
+
+        <%= f.label :date %>
+        <%= f.date_field :date %>
+
+        <%= f.label :time %>
+        <%= f.time_field :time %>
+
+        <%= f.submit "Reserve", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+
+
+  <br>
 
 </div>
