@@ -65,7 +65,7 @@ table {
 body {
     font: 16px/1.4em 'PT Sans', sans-serif;;
     color: #1c1c1c;
-    background-color: black;
+  /*  background-color: black; */
 }
 
 p,
@@ -89,7 +89,7 @@ h1 {
   line-height: 1.4em;
   margin: 0 0 .4em;
   font-weight: bold;
-  color: white;
+  color: black;
 }
 
 /* page headings */
@@ -99,11 +99,11 @@ h2 {
     line-height: 1.4em;
     margin: 0 0 .4em;
     font-weight: bold;
-    color: white;
+    color: black;
 }
 
   p {
-      color: white;
+      color: black;
   }
 
 .hours {
@@ -213,23 +213,15 @@ a.to_nav:focus {
 }
 
 .jumbotron {
-  background: image-url("bar3-1.jpg");
+  background: image-url("home_drinks.jpg");
   background-repeat: no-repeat;
   min-height: 1000px;
   width: 100%;
   background-size: 100% 100%;
 }
 
-.sidebar {
-  display: none;
-}
 
 /* location */
-
-.container {
-  margin-left: 0;
-  margin-right: 0;
-}
 
  #content {
    text-align: center;
@@ -249,9 +241,8 @@ a.to_nav:focus {
     width: 100%;
   }
 
-
 #sign-container {
-  background: image-url("dada_sign.jpg");
+  background: image-url("dada_logo.jpg");
   background-size: 100% 100%;
   height: 400px;
   border-radius: 4px 4px;
@@ -262,6 +253,27 @@ a.to_nav:focus {
   border-width: 0px;
 }
 
+#sign-container2 {
+  background: image-url("dada_logo.jpg");
+  background-size: 100% 100%;
+  height: 400px;
+  border-radius: 4px 4px;
+  border-color: #fff;
+  border-style: solid;
+  box-shadow: 2px 2px 10px #B1B1B1;
+  margin-top: 25px;
+  border-width: 0px;
+}
+
+#location {
+  background: image-url("dada_sign.jpg");
+  background-repeat: no-repeat;
+  min-height: 200px;
+  width: 100%;
+  min-height: 400px;
+  background-size: 100% 100%;
+}
+
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -270,95 +282,41 @@ input, textarea, select, .uneditable-input {
   margin-bottom: 15px;
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
-  box-sizing:         border-box;  
+  box-sizing:         border-box;
 }
 
 input {
   height: auto !important;
 }
 
+.reserve {
+
+}
+
 
 @media only screen and (min-width: 768px) {
-
-
-
-  #dada_sign {
-
-  }
-
-
-  #sidebar-wrapper {
-
-    margin-left: -250px;
-    left: 250px;
-    width: 250px;
-    position: fixed;
-    height: 100%;
-    z-index: 1000;
-  }
-
-    #content {
-      margin-left: 350px;
-    }
-
-
-    .sidebar {
-      display: block;
-      height: 100%;
-      position: fixed;
-      left: 0;
-      top: 0;
-
-    }
-
-    .jumbotron {
-      margin-left: 300px;
-    }
-
-    .content {
-      position: fixed;
-      left: 400px;
-    }
-
-
-    .desktop_logo {
-      position: fixed;
-      top: 15px;
-      left: 25px;
-      z-index: 1;
-    }
 
     a.to_nav {
         display: none;
     }
 
-    header {
-      display: none;
-    }
-
-
     .wrapper {
         position: relative;
         margin: auto;
-
     }
 
     #primary_nav {
         position: absolute;
-        top: 300px;
-        left: 50px;
+        top: 5px;
+        right: 10px;
         background: none;
     }
-    #primary_nav ul {
-      background: none;
-    }
-/*
+
     #primary_nav li {
         display: inline;
     }
-*/
+
     #primary_nav li a {
-        font-size: 1.4em;
         float: left;
         border: none;
         padding: 0 10px;
@@ -382,10 +340,6 @@ input {
       width: 95%;
     }
 
-    #mobile_nav {
-      display: none;
-    }
-
     .mobile {
       display: none;
     }
@@ -393,9 +347,6 @@ input {
 }
 
 @media only screen and (max-width: 767px) {
-  .desktop_logo {
-    display: none;
-  }
 
   .jumbotron {
     background: image-url("home_drinks.jpg");
@@ -410,9 +361,8 @@ input {
   width: 100%;
   }
 
-
-.desktop {
-  display: none;
-}
+  header {
+    background: #1c1c1c;
+  }
 
 }

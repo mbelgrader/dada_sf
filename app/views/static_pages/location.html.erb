@@ -1,38 +1,36 @@
 <% provide(:title, "Location") %>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-12">
-      <!-- content of page -->
-      <div id="content">
-          <div id="sign-container">
-        <!--   <%= image_tag src="dada_sign.jpg", class: "dada_sign" %> -->
-          </div>
+<section class="jumbotron" id="location">
+</section>
 
-          <div id="map-container">
-            <div id="map-canvas"></div>
-          </div>
-          
-          <br>
+<div class="container">
 
-          <div class="row">
-
-            <div class="col-sm-6">
-              <h2>Location:</h2>
-              <p>65 Post St
-              <br>(Btwn Montgomery and Kearny)
-              <br>San Francisco, CA 94104
-              <br>(415) 357-1367
-             </p>
-            </div>
-
-            <div class="col-sm-6">
-            <%= render "layouts/hours" %>
-            </div>
-
+    <div class="row">
+      <figure class="col-md-12">
+        <div id="map-container">
+          <div id="map-canvas"></div>
         </div>
+    </div>
 
+        <br>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div id="content">
+          <h2>Location:</h2>
+          <p>65 Post St
+          <br>(Btwn Montgomery and Kearny)
+          <br>San Francisco, CA 94104
+          <br>(415) 357-1367
+         </p>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div id="content">
+          <%= render "layouts/hours" %>
+        </div>
       </div>
     </div>
-  </div>
+
 </div>
