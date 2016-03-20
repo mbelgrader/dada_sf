@@ -293,6 +293,24 @@ input {
   padding-top: 10px;
 }
 
+#section {
+  background: image-url("section.jpg");
+  background-repeat: no-repeat;
+  min-height: 200px;
+  width: 100%;
+  min-height: 400px;
+  background-size: 100% 100%;
+
+}
+
+#full_bar {
+  background: image-url("full_bar.jpg");
+  background-repeat: no-repeat;
+  min-height: 200px;
+  width: 100%;
+  min-height: 400px;
+  background-size: 100% 100%;
+}
 
 @media only screen and (min-width: 768px) {
 
@@ -344,6 +362,14 @@ input {
       display: none;
     }
 
+    #section_container {
+      padding-top:110px;
+    }
+
+    #full_bar_container {
+      padding-top:130px;
+    }
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -363,6 +389,15 @@ input {
 
   header {
     background: #1c1c1c;
+  }
+
+
+  #section_container {
+    padding-top:10px;
+  }
+
+  #full_bar_container {
+    padding-top:10px;
   }
 
 }

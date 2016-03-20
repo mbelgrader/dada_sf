@@ -1,8 +1,7 @@
 <% provide(:title, "Reservations") %>
 
 
-<div class="container reserve">
-
+<div class="container reserve" style="padding-top:40px">
   <div class="row">
     <div class="col-md-6" style="color:black">
       <h1 style="text-align:center">Reserve a Section</h1>
@@ -30,11 +29,17 @@
         <%= f.submit "Reserve", class: "btn btn-primary" %>
       <% end %>
     </div>
+
+    <div class="col-md-6" id="section_container">
+      <div id="section"></div>
+    </div>
+
   </div>
+
 
   <br>
 
-  <div class="row">
+  <div class="row" style="padding-top:40px">
     <div class="col-md-6" style="color:black">
       <h1 style="text-align:center">Book a Private Party</h1>
       <p style="text-align:center">
@@ -63,6 +68,13 @@
         <%= f.submit "Reserve", class: "btn btn-primary" %>
       <% end %>
     </div>
+
+
+
+    <div class="col-md-6" id="full_bar_container">
+      <div id="full_bar"></div>
+    </div>
+
   </div>
 
 
