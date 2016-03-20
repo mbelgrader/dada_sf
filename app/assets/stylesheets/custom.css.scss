@@ -82,6 +82,7 @@ a {
     color: #1D745A;
 }
 
+
 /* mobile header */
 h1 {
   font-family: 'PT Serif', serif;
@@ -117,11 +118,7 @@ h2 {
 
 }
 
-article {
-    border-bottom: 1px solid #d8d8d8;
-    padding: 10px 20px 0 20px;
-    margin: 10px 0;
-}
+
 
 /*header*/
 
@@ -215,10 +212,12 @@ a.to_nav:focus {
 .jumbotron {
   background: image-url("home_drinks.jpg");
   background-repeat: no-repeat;
-  min-height: 1000px;
+  min-height: 700px;
   width: 100%;
   background-size: 100% 100%;
 }
+
+
 
 
 /* location */
@@ -274,6 +273,11 @@ a.to_nav:focus {
   background-size: 100% 100%;
 }
 
+.facebook {
+  height: 40px;
+  max-width: 40px;
+}
+
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -310,6 +314,17 @@ input {
   width: 100%;
   min-height: 400px;
   background-size: 100% 100%;
+}
+
+footer {
+  min-height: 200px;
+  background-color: black;
+  margin-right: 0;
+
+}
+
+footer p {
+  color: white;
 }
 
 @media only screen and (min-width: 768px) {
@@ -370,6 +385,16 @@ input {
       padding-top:130px;
     }
 
+
+    #parent{
+     display:flex;
+     justify-content:space-around;
+    }
+
+    #facebook {
+      padding-top: 40px;
+    }
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -399,5 +424,11 @@ input {
   #full_bar_container {
     padding-top:10px;
   }
+
+footer {
+  text-align: center;
+}
+
+
 
 }
