@@ -1,6 +1,31 @@
 <% provide(:title, "Reservations") %>
 
+<h1>Reservations</h1>
+
 <div class="content">
-    <h1>Reservations</h1>
-    <p>Book a party!</p>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3" style="color:gray">
+      <%= form_for(Contact.new) do |f| %>
+        <%= f.label :name%>
+        <%= f.text_field :name %>
+
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+
+        <%= f.label :phone %>
+        <%= f.number_field :phone %>
+
+        <%= f.label :guests %>
+        <%= f.number_field :guests %>
+
+        <%= f.label :date %>
+        <%= f.date_field :date %>
+
+        <%= f.label :time %>
+        <%= f.time_field :time %>
+
+        <%= f.submit "Reserve", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
 </div>
