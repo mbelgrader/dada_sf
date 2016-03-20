@@ -1,36 +1,22 @@
-<div class="wrapper">
 
-  <div id="sidebar-wrapper">
-      <%= render 'layouts/header' %>
-  </div>
-
-
-  <div class="desktop">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <!-- content of page -->
-          <section class="jumbotron container-fluid"></section>
-          <div id="content">
-            <%= render 'layouts/hours' %>
-          </div>
+<div class="desktop">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- content of page -->
+        <section class="jumbotron container-fluid"></section>
+        <div id="content">
+          <%= render 'layouts/hours' %>
         </div>
       </div>
     </div>
   </div>
+</div>
 
 
-  <div class="mobile">
-    <section class="jumbotron container-fluid"></section>
-      <div id="content">
-        <%= render 'layouts/hours' %>
-      </div>
-  </div>
-
-
-
-  <div id="mobile_nav">
-    <%= render 'layouts/nav' %>
-  </div>
-
-</div><!--end wrapper-->
+<div class="mobile">
+  <section class="jumbotron container-fluid"></section>
+    <div id="content">
+      <%= render 'layouts/hours' %>
+    </div>
+</div>

@@ -27,8 +27,6 @@ function initialize() {
           },
           map: map
         });
-
-
 }
 
 
