@@ -5,3 +5,22 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Contact.create!(name: "Example User",
+            email: "example@gmail.com",
+            phone: "415-555-5555",
+            guests: 10)
+
+50.times do |n|
+  name = Faker::Name.name
+  email = Faker::Internet.email
+  guests = Faker::Number.between(8, 40)
+  date = Faker::Date.forward(23)
+  phone = Faker::PhoneNumber.cell_phone
+  time = Faker::Time.backward(14, :evening)
+  Contact.create!(name: name,
+                  email: email,
+                  phone: phone,
+                  guests: 10,
+                  date: date,
+                  time: time)
+end

@@ -1,5 +1,11 @@
 class ContactsController < ApplicationController
 
+
+  def index
+    @contacts = Contact.paginate(page: params[:page])
+    @willis = Contact.last
+  end
+
   def show
     @contact = Contact.find(params[:id])
   end

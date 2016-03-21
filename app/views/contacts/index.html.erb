@@ -1,0 +1,30 @@
+
+<div class="container">
+
+<h1 style="text-align:center">Upcoming Reservations</h1>
+
+<%= will_paginate %>
+
+<table class="contacts table" %>
+  <tr style="font-weight:bold">
+    <td>Name</td>
+    <td>Email</td>
+    <td>Phone</td>
+    <td>Guests</td>
+    <td>Date</td>
+    <td>Time</td>
+  </tr>
+  <% @contacts.each do |contact| %>
+    <tr>
+      <td><%= contact.name %></td>
+      <td><%= contact.email %></td>
+      <td><%= contact.phone %></td>
+      <td><%= contact.guests %></td>
+      <td><%= contact.date %></td>
+      <td><%= contact.time %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= will_paginate %>
+</div>

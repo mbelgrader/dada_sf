@@ -22,5 +22,20 @@ module Dada
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Date
+# ----------------------------
+Date::DATE_FORMATS[:default] = "%m/%d/%Y"
+
+# DateTime
+# ----------------------------
+DateTime::DATE_FORMATS[:default] = "%b %d %Y %a"
+# Time
+# ----------------------------
+Time::DATE_FORMATS[:default] = "%I:%M %p"
+
+
+
+
   end
 end

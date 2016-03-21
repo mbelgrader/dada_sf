@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'gallery' => 'static_pages#gallery'
   get 'reservations' => 'static_pages#reservations'
   get 'location' => 'static_pages#location'
+  get 'index' => 'contacts#index'
   resources :contacts
 
   # The priority is based upon order of creation: first created -> highest priority.
