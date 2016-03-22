@@ -1,9 +1,7 @@
 class ContactsController < ApplicationController
 
-
   def index
     @contacts = Contact.paginate(page: params[:page])
-    @willis = Contact.last
   end
 
   def show
@@ -26,7 +24,8 @@ class ContactsController < ApplicationController
   private
 
     def contact_params
-      params.require(:contact).permit(:name, :email, :phone, :guests, :date, :time)
+      params.require(:contact).permit(:name, :email, :phone, :guests,
+                                      :date, :time, :size, :info)
     end
 
 end

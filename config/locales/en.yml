@@ -1,4 +1,4 @@
-# Files in the config/locales directory are used for internationalization
+
 # and are automatically loaded by Rails. If you want to use locales other
 # than English, add the necessary files in this directory.
 #
@@ -26,3 +26,9 @@ en:
   time:
     formats:
       default: "%I:%M"
+
+  faker:
+    company:
+      # Existing faker field, new data
+      profession: [Mezzanine only, Full Bar]
+      buzzword: [Birthday party, Corporate Event, Company Party]

@@ -13,6 +13,8 @@
     <td>Guests</td>
     <td>Date</td>
     <td>Time</td>
+    <td>Size</td>
+    <td>Info</td>
   </tr>
   <% @contacts.each do |contact| %>
     <tr>
@@ -22,6 +24,8 @@
       <td><%= contact.guests %></td>
       <td><%= contact.date %></td>
       <td><%= contact.time %></td>
+      <td><%= contact.size %></td>
+      <td><%= contact.info %></td>
     </tr>
   <% end %>
 </table>
