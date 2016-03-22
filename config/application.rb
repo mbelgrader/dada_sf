@@ -29,7 +29,7 @@ Date::DATE_FORMATS[:default] = "%m/%d/%Y"
 
 # DateTime
 # ----------------------------
-DateTime::DATE_FORMATS[:default] = "%b %d %Y %a"
+DateTime::DATE_FORMATS[:default] = "%b %d %a"
 # Time
 # ----------------------------
 Time::DATE_FORMATS[:default] = "%I:%M %p"

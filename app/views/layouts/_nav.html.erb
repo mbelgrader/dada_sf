@@ -1,5 +1,21 @@
 <nav id="primary_nav">
   <ul>
+  <% if logged_in? %>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        Admin <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        <li><%= link_to "Parties", 'index' %></li>
+        <li><%= link_to "Settings", '#' %></li>
+        <li class="divider"></li>
+        <li>
+          <%= link_to "Log out", logout_path, method: "delete" %>
+        </li>
+      </ul>
+    </li>
+  <% end %>
+
     <li><%= link_to "About",        'about' %></li>
     <li><%= link_to "Location",     'location' %></li>
     <li><%= link_to "Gallery",      'gallery' %></li>

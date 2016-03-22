@@ -225,13 +225,19 @@ a.to_nav:focus {
   background-size: 100% 100%;
 }
 
-
-
-
+.login {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 /* location */
 
  .content {
    text-align: center;
+ }
+
+ .checkbox {
+   text-align: center;
+   padding-bottom: 10px;
  }
 
  #map-container {

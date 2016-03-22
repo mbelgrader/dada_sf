@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   root 'static_pages#home'
-  get 'about' => 'static_pages#about'
-  get 'gallery' => 'static_pages#gallery'
-  get 'reservations' => 'static_pages#reservations'
-  get 'location' => 'static_pages#location'
-  get 'index' => 'contacts#index'
+  get     'about'        => 'static_pages#about'
+  get     'gallery'      => 'static_pages#gallery'
+  get     'reservations' => 'static_pages#reservations'
+  get     'location'     => 'static_pages#location'
+  get     'index'        => 'contacts#index'
+  get     'login'        => 'sessions#new'
+  post    'login'        => 'sessions#create'
+  delete  'logout'       => 'sessions#destroy'
   resources :contacts
   resources :users
 
