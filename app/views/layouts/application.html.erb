@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title><%= yield(:title) %> | Dada SF</title>
+  <title><%= yield(:title) %>Dada SF</title>
   <meta name="description" content="Dada Bar SF">
   <meta name="author" content="Maria Belgrader">
 
@@ -30,19 +30,12 @@
   });
   </script>
 </head>
+
 <body>
-
   <div class="wrapper">
-
     <%= render 'layouts/header' %>
       <%= yield %>
     <%= render 'layouts/footer' %>
-
-
-    <div id="mobile_nav">
-      <%= render 'layouts/nav' %>
-    </div>
-  </div><!--end wrapper-->
-
+  </div>
 </body>
 </html>

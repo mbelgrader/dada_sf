@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get     'about'        => 'static_pages#about'
   get     'gallery'      => 'static_pages#gallery'
-  get     'reservations' => 'static_pages#reservations'
+  get     'reservations' => 'contacts#new'
   get     'location'     => 'static_pages#location'
   get     'index'        => 'contacts#index'
   get     'login'        => 'sessions#new'

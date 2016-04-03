@@ -63,7 +63,7 @@ table {
 /*begin our styles*/
 
 body {
-    font: 16px/1.4em 'PT Sans', sans-serif;;
+    font: 16px/1.4em 'Optima','PT Sans', sans-serif;;
     color: #1c1c1c;
   /*  background-color: black; */
 }
@@ -84,7 +84,7 @@ a {
 
 h2 {
     font-family: 'PT Serif', serif;
-    font-size: 20px;
+    font-size: 1.2rem;
     line-height: 1.4em;
     margin: 0 0 .4em;
     font-weight: bold;
@@ -95,16 +95,8 @@ h2 {
       color: black;
   }
 
-.hours {
-  background: none;
-  border: none;
-  font: 16px/1.4em 'PT Sans', sans-serif;
-}
+
 /*layout*/
-
-.wrapper {
-
-}
 
 
 
@@ -132,16 +124,19 @@ header {
         }
 
 h1.logo {
-    color: #d8d8d8;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
+    /* color: #d8d8d8; */
+    color: white;
     font-size: 20px;
     line-height: 22px;
     float: left;
     letter-spacing: 0.2em;
 }
 
+ .content {
+   text-align: center;
+ }
+
+/*
 a.to_nav {
     float: right;
     color: #fff;
@@ -164,36 +159,33 @@ a.to_nav:focus {
     color: #1c1c1c;
     background: #ccc;
 }
+*/
 
-.book {
-  color: #fff;
-  background: $gray-dark;
-  text-decoration: none;
-  padding: 0 10px;
-  font-family: 'PT Serif', serif;
-  font-size: 18px;
-  line-height: 1.4em;
-  margin: 0 0 .4em;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
+/* footer */
+
+footer {
+  height: 100%;
+  background-color: black;
+  margin-right: 0;
+  margin-top: 20px;
+  padding-top: 25px;
 }
 
-.book:hover {
-  color: $gray-lighter;
+footer p {
+  color: white;
 }
+
+
 
 /*navigation*/
 
-#primary_nav ul {
+#mobile_nav ul {
     list-style: none;
     background: #1c1c1c;
     padding: 5px 0;
 }
 
-#primary_nav li a {
+#mobile_nav li a {
     display: block;
     padding: 0 20px;
     color: #fff;
@@ -207,34 +199,131 @@ a.to_nav:focus {
     border-bottom: 1px solid #383838;
 }
 
-#primary_nav li:last-child a {
+#mobile_nav li:last-child a {
     border-bottom: none;
 }
 
-#primary_nav li a:hover,
-#primary_nav li a:focus {
+#mobile_nav li a:hover,
+#mobile_nav li a:focus {
     color: gray;
     background: none;
 }
 
-.jumbotron {
-  background: image-url("home_drinks.jpg");
-  background-repeat: no-repeat;
-  min-height: 700px;
-  width: 100%;
-  background-size: 100% 100%;
+/* desktop nav */
+
+#desktop_nav ul {
+    list-style: none;
+    background: #1c1c1c;
+    padding: 5px 0;
 }
 
-/* location */
+#desktop_nav li a {
+    display: block;
+    padding: 0 20px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    letter-spacing: 0.1em;
+    line-height: 2em;
+    height: 2em;
+}
 
- .content {
-   text-align: center;
+
+#desktop_nav li a:hover,
+#desktop_nav li a:focus {
+    color: gray;
+    font-weight: bold;
+}
+
+ /* home */
+
+ .jumbotron {
+   background: image-url("bar_front2.jpg");
+   background-repeat: no-repeat;
+   min-height: 750px;
+   width: 100%;
+   background-size: 100% 100%;
  }
 
- .form {
-   padding-top: 40px;
-   padding-bottom: 40px;
+ .book {
+   text-decoration: none;
+   font-weight: bold;
+   padding: 5px 10px;
+/*   font-family: 'PT Serif', serif*/
+   font-size: 18px;
+   margin: 0 0 .4em;
+   text-transform: uppercase;
+   letter-spacing: 0.1em;
+   background-color: none;
+   /*
+   border-style: solid;
+   border-color: gray;
+   border-width: 2px;
+   border-radius: 4px;
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   */
  }
+
+ .book:hover,
+ .book:focus {
+   color: $gray;
+   font-weight: bold;
+   text-decoration: none;
+   cursor: pointer;
+ }
+
+ /* reservations */
+
+   .form {
+     padding-top: 40px;
+     padding-bottom: 40px;
+   }
+
+   #error_explanation {
+    color: red;
+    ul {
+      color: red;
+      margin: 0 0 30px 0;
+    }
+  }
+
+  input, textarea, select, .uneditable-input {
+    border: 1px solid #bbb;
+    width: 100%;
+    margin-bottom: 15px;
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing:         border-box;
+  }
+
+  input {
+    height: auto !important;
+  }
+
+  .reserve {
+    padding-top: 10px;
+  }
+
+  #section {
+    background: image-url("section2.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 400px;
+    background-size: 100% 100%;
+
+  }
+
+  #full_bar {
+    background: image-url("book_bar.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 400px;
+    background-size: 100% 100%;
+  }
+
+ /* location */
 
  #map-container {
     height: 400px;
@@ -250,117 +339,43 @@ a.to_nav:focus {
     width: 100%;
   }
 
-#sign-container {
-  background: image-url("dada_logo.jpg");
-  background-size: 100% 100%;
-  height: 400px;
-  border-radius: 4px 4px;
-  border-color: #fff;
-  border-style: solid;
-  box-shadow: 2px 2px 10px #B1B1B1;
-  margin-top: 25px;
-  border-width: 0px;
-}
-
-#sign-container2 {
-  background: image-url("dada_logo.jpg");
-  background-size: 100% 100%;
-  height: 400px;
-  border-radius: 4px 4px;
-  border-color: #fff;
-  border-style: solid;
-  box-shadow: 2px 2px 10px #B1B1B1;
-  margin-top: 25px;
-  border-width: 0px;
-}
-
-#location {
-  background: image-url("dada_sign.jpg");
-  background-repeat: no-repeat;
-  min-height: 200px;
-  width: 100%;
-  min-height: 400px;
-  background-size: 100% 100%;
-}
-
-.facebook {
-  height: 40px;
-  max-width: 40px;
-}
-
-/* forms */
-
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: 100%;
-  margin-bottom: 15px;
-  -moz-box-sizing:    border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing:         border-box;
-}
-
-input {
-  height: auto !important;
-}
-
-.reserve {
-  padding-top: 10px;
-}
-
-#section {
-  background: image-url("section.jpg");
-  background-repeat: no-repeat;
-  min-height: 200px;
-  width: 100%;
-  min-height: 400px;
-  background-size: 100% 100%;
-
-}
-
-#full_bar {
-  background: image-url("full_bar.jpg");
-  background-repeat: no-repeat;
-  min-height: 200px;
-  width: 100%;
-  min-height: 400px;
-  background-size: 100% 100%;
-}
-
-footer {
-  min-height: 200px;
-  background-color: black;
-  margin-right: 0;
-  padding-top: 25px;
-}
-
-footer p {
-  color: white;
-}
+  #location {
+    background: image-url("dada_sign2.jpg");
+    background-repeat: no-repeat;
+    min-height: 200px;
+    width: 100%;
+    min-height: 400px;
+    background-size: 100% 100%;
+  }
 
 
 @media only screen and (min-width: 768px) {
-
-    a.to_nav {
-        display: none;
-    }
 
     .wrapper {
         position: relative;
         margin: auto;
     }
 
-    #primary_nav {
+    .mobile {
+      display: none;
+    }
+
+    #mobile_nav {
+      display:none;
+    }
+
+    #desktop_nav {
         position: absolute;
         top: 5px;
         right: 10px;
         background: none;
     }
 
-    #primary_nav li {
+    #desktop_nav li {
         display: inline;
     }
 
-    #primary_nav li a {
+    #desktop_nav li a {
         float: left;
         border: none;
         padding: 0 10px;
@@ -369,12 +384,8 @@ footer p {
         border-radius: 2px;
     }
 
-    #primary_nav li.top {
-        display: none;
-    }
-
-    #primary_nav li a:hover,
-    #primary_nav li a:focus {
+    #desktop_nav li a:hover,
+    #desktop_nav li a:focus {
         color: gray;
         background: none;
     }
@@ -382,10 +393,6 @@ footer p {
     section .row img {
       margin: 20px -80px 20px;
       width: 95%;
-    }
-
-    .mobile {
-      display: none;
     }
 
     #section_container {
@@ -396,19 +403,21 @@ footer p {
       padding-top:130px;
     }
 
-
-    #parent{
-     display:flex;
-     justify-content:space-around;
-    }
-
-    #facebook {
-      padding-top: 20px;
-    }
-
 }
 
 @media only screen and (max-width: 767px) {
+
+  #desktop_nav {
+    display: none;
+  }
+
+  #mobile_nav {
+    float: right;
+  }
+
+  span.glyphicon {
+      font-size: 2em;
+  }
 
   .jumbotron {
     background: image-url("home_drinks.jpg");
@@ -416,7 +425,7 @@ footer p {
     min-height: 200px;
     width: 100%;
     background-size: 100% 100%;
-}
+  }
 
   section .row img {
   margin: 0 0 20px;
@@ -427,7 +436,6 @@ footer p {
     background: #1c1c1c;
   }
 
-
   #section_container {
     padding-top:10px;
   }
@@ -435,10 +443,6 @@ footer p {
   #full_bar_container {
     padding-top:10px;
   }
-
-footer {
-  text-align: center;
-}
 
 
 

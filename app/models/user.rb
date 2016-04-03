@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
   attr_accessor :remember_token
-  validates :name, presence: true
-  validates :email, presence: true
+  validates :name, presence: true, length: { maximum: 40 }
+  validates :email, presence: true, length: { maximum: 255 },
+                    format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
   has_secure_password
 
   def User.digest(string)
