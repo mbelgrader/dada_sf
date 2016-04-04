@@ -328,22 +328,15 @@ footer p {
     border-color: #fff;
     border-style: solid;
     box-shadow: 2px 2px 10px #B1B1B1;
-    margin-top: 25px;
     border-width: 0px;
   }
+  
   #map-canvas {
     height: 384px;
     width: 100%;
   }
 
-  #location {
-    background: image-url("dada_sign2.jpg");
-    background-repeat: no-repeat;
-    min-height: 200px;
-    width: 100%;
-    min-height: 400px;
-    background-size: 100% 100%;
-  }
+
 
 
 @media only screen and (min-width: 768px) {
@@ -400,6 +393,14 @@ footer p {
       padding-top:120px;
     }
 
+    #location {
+      background: image-url("dada_sign2.jpg");
+      background-repeat: no-repeat;
+      min-height: 400px;
+      width: 100%;
+      background-size: 100% 100%;
+    }
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -441,6 +442,12 @@ footer p {
     padding-top:10px;
   }
 
+  #location {
+    background: image-url("sign_mobile.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 100% 100%;
+  }
 
 
 }
