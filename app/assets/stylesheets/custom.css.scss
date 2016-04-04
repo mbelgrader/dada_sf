@@ -124,8 +124,8 @@ header {
         }
 
 h1.logo {
-    /* color: #d8d8d8; */
-    color: white;
+    color: #d8d8d8;
+    font-family: 'PT Serif', serif;
     font-size: 20px;
     line-height: 22px;
     float: left;
@@ -136,30 +136,29 @@ h1.logo {
    text-align: center;
  }
 
-/*
-a.to_nav {
+
+.menu {
     float: right;
-    color: #fff;
-    background: #4e4e4e;
+    color: #d8d8d8;
     text-decoration: none;
     padding: 0 10px;
     font-size: 12px;
-    font-weight: bold;
-    line-height: 22px;
     height: 22px;
-    text-transform: uppercase;
     letter-spacing: 0.1em;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
-    border-radius: 2px;
+    border-radius: 4px;
 }
 
-a.to_nav:hover,
-a.to_nav:focus {
+.menu:hover,
+.menu:focus {
     color: #1c1c1c;
     background: #ccc;
 }
-*/
+
 
 /* footer */
 
@@ -196,11 +195,6 @@ footer p {
     letter-spacing: 0.1em;
     line-height: 2em;
     height: 2em;
-    border-bottom: 1px solid #383838;
-}
-
-#mobile_nav li:last-child a {
-    border-bottom: none;
 }
 
 #mobile_nav li a:hover,
@@ -220,7 +214,8 @@ footer p {
 #desktop_nav li a {
     display: block;
     padding: 0 20px;
-    color: #fff;
+/*    color: #fff; */
+    color: #d8d8d8;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.1em;
