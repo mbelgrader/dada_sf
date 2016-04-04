@@ -26,6 +26,8 @@
       <td><%= contact.time %></td>
       <td><%= contact.size %></td>
       <td><%= contact.info %></td>
+      <td><%= link_to "delete", contact, method: :delete,
+                                  data: { confirm: "You sure?" } %></td>
     </tr>
   <% end %>
 </table>

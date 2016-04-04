@@ -1,17 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  email: MyString
-  phone: MyString
-  guests: 1
-  date: 2016-03-19
-  time: 2016-03-19 17:22:59
+example:
+  name: Example
+  email: example@example.com
+  guests: 240
 
-two:
-  name: MyString
-  email: MyString
-  phone: MyString
-  guests: 1
-  date: 2016-03-19
-  time: 2016-03-19 17:22:59
+<% 40.times do |n| %>
+contact_<%= n %>:
+  name:  <%= "Contact #{n}" %>
+  email: <%= "contact-#{n}@example.com" %>
+  guests: 240
+<% end %>
