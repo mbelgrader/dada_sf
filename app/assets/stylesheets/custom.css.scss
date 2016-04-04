@@ -330,7 +330,7 @@ footer p {
     box-shadow: 2px 2px 10px #B1B1B1;
     border-width: 0px;
   }
-  
+
   #map-canvas {
     height: 384px;
     width: 100%;
@@ -404,6 +404,10 @@ footer p {
 }
 
 @media only screen and (max-width: 767px) {
+
+  .desktop {
+    display: none;
+  }
 
   #desktop_nav {
     display: none;
