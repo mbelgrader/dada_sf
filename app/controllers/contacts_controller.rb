@@ -15,7 +15,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
-      flash[:success] = "Thank you! We will be in touch."
+      flash.now[:success] = "Thank you! We will be in touch."
       render 'new'
     else
       render 'new'

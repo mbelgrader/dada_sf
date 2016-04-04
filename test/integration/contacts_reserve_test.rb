@@ -19,5 +19,5 @@ class ContactsReserveTest < ActionDispatch::IntegrationTest
                                      guests: 10}
     end
   end
-  
+
 end
