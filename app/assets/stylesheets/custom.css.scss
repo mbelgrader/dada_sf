@@ -235,7 +235,7 @@ footer p {
  /* home */
 
  .jumbotron {
-   background: image-url("bar_front2.jpg");
+   background: image-url("slider1.jpg");
    background-repeat: no-repeat;
    min-height: 750px;
    width: 100%;
@@ -312,12 +312,13 @@ footer p {
   }
 
   #full_bar {
-    background: image-url("book_bar.jpg");
+    background: image-url("book_bar2.jpg");
     background-repeat: no-repeat;
     width: 100%;
     min-height: 400px;
     background-size: 100% 100%;
   }
+
 
  /* location */
 
@@ -392,11 +393,11 @@ footer p {
     }
 
     #section_container {
-      padding-top:110px;
+      padding-top:34px;
     }
 
     #full_bar_container {
-      padding-top:130px;
+      padding-top:120px;
     }
 
 }
