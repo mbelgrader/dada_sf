@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'photos/new'
+
   get 'password_resets/new'
 
   get 'password_resets/edit'
@@ -7,7 +9,7 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
   get     'about'        => 'static_pages#about'
-  get     'gallery'      => 'static_pages#gallery'
+  get     'gallery'      => 'photos#new'
   get     'reservations' => 'contacts#new'
   get     'location'     => 'static_pages#location'
   get     'index'        => 'contacts#index'
@@ -17,6 +19,7 @@ Rails.application.routes.draw do
   resources :contacts
   resources :users
   resources :password_resets, only: [:new, :create, :edit, :update]
+  resources :photos
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

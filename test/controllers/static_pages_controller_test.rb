@@ -13,12 +13,6 @@ class StaticPagesControllerTest < ActionController::TestCase
     assert_select "title", "About | Dada SF"
   end
 
-  test "should get gallery" do
-    get :gallery
-    assert_response :success
-    assert_select "title", "Gallery | Dada SF"
-  end
-
   test "should get location" do
     get :location
     assert_response :success

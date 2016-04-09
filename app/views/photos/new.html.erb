@@ -1,0 +1,40 @@
+<% provide(:title, "Gallery | ") %>
+
+<div class="container" style="text-align:center">
+    <h2>Gallery</h2>
+</div>
+
+<div class="container">
+  <%= form_for (@photo), url: photos_path, html: { multipart: true } do |f| %>
+
+      <%= f.label :image %>
+      <%= f.file_field :image %>
+
+      <%= f.submit "Add Photo", class: "btn btn-primary" %>
+
+  <% end %>
+</div>
+
+<!-- <div class="container">
+  <% @photos.each do |photo| %>
+    <%= image_tag photo.image.url(:medium) %>
+  <% end %>
+</div> -->
+
+<!-- <div class="container">
+  <% @photos.each do |photo| %>
+  <a href='<%= photo.image.url(:large) %>' rel="lightbox" title="<%= photo.caption %>">
+    <%= image_tag photo.image.url(:small) %>
+    <% end %>
+  </a>
+</div> -->
+
+<div class="imageRow">
+    <div class="single">
+        <% @photos.each do |photo| %>
+          <%= link_to image_path(photo.image, :rel=>"lightbox", :title=>"my caption") do %>
+              <%= image_tag photo.image.url(:medium) %>
+          <% end %>
+        <% end %>
+    </div>
+</div>

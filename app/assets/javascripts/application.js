@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require lightbox
 //= require bootstrap
 //= require bootstrap-datepicker
 //= require_tree .
