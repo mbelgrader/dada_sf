@@ -10,4 +10,11 @@ class UserMailer < ApplicationMailer
 
     mail to: user.email, subject: "Password reset"
   end
+
+  def info(contact)
+    @contact = contact
+
+    mail to: "mbelgrader5@gmail.com", subject: "Reservation Request"
+  end
+    
 end

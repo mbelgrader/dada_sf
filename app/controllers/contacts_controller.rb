@@ -16,6 +16,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
+      UserMailer.info(@contact).deliver_now
       flash.now[:success] = "Thank you! We will be in touch."
       render 'new'
     else
