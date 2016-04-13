@@ -10,13 +10,6 @@ User.create!(name: "Mike",
              password: "dada",
              password_confirmation: "dada")
 
-Contact.create!(name: "Example User",
-            email: "example@gmail.com",
-            phone: "415-555-5555",
-            guests: 10,
-            size: "mezzanine",
-            info: "Birthday party")
-
 50.times do |n|
   name = Faker::Name.name
   email = Faker::Internet.safe_email

@@ -23,6 +23,8 @@
         <%= f.label :time %>
         <%= f.time_field :time %>
 
+        <%= f.hidden_field :size, :value => "Table"  %>
+
         <%= f.submit "Reserve", class: "btn btn-primary" %>
       <% end %>
     </div>

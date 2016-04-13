@@ -18,7 +18,7 @@ class ContactsController < ApplicationController
     if @contact.save
       UserMailer.info(@contact).deliver_now
       flash.now[:success] = "Thank you! We will be in touch."
-      render 'new'
+      render 'new' 
     else
       render 'new'
     end
