@@ -1,40 +1,28 @@
 <% provide(:title, "Gallery | ") %>
 
-<div class="container" style="text-align:center">
+
+<div class="container content">
     <h2>Gallery</h2>
-</div>
 
-<div class="container">
-  <%= form_for (@photo), url: photos_path, html: { multipart: true } do |f| %>
 
-      <%= f.label :image %>
-      <%= f.file_field :image %>
+  <div class="container" style="width:50%">
+    <%= form_for (@photo), url: photos_path, html: { multipart: true } do |f| %>
 
-      <%= f.submit "Add Photo", class: "btn btn-primary" %>
+        <%= f.file_field :image %>
 
-  <% end %>
-</div>
+        <%= f.submit "Add Photo", class: "btn btn-primary" %>
 
-<!-- <div class="container">
-  <% @photos.each do |photo| %>
-    <%= image_tag photo.image.url(:medium) %>
-  <% end %>
-</div> -->
-
-<!-- <div class="container">
-  <% @photos.each do |photo| %>
-  <a href='<%= photo.image.url(:large) %>' rel="lightbox" title="<%= photo.caption %>">
-    <%= image_tag photo.image.url(:small) %>
     <% end %>
-  </a>
-</div> -->
+  </div>
 
-<div class="imageRow">
-    <div class="single">
-        <% @photos.each do |photo| %>
-          <%= link_to image_path(photo.image, :rel=>"lightbox", :title=>"my caption") do %>
-              <%= image_tag photo.image.url(:medium) %>
+  <div class="imageRow" style="padding-top:20px">
+      <div class="single">
+          <% @photos.each do |photo| %>
+            <%= link_to image_path(photo.image, :rel=>"lightbox", :title=>"my caption") do %>
+                <%= image_tag photo.image.url(:medium) %>
+            <% end %>
           <% end %>
-        <% end %>
-    </div>
+      </div>
+  </div>
+
 </div>

@@ -8,8 +8,8 @@ var map;
 function initialize() {
 
   var mapOptions = {
-          center: new google.maps.LatLng(37.7881736, -122.4002521),
-          zoom: 15,
+          center: new google.maps.LatLng(37.7889849, -122.4031839),
+          zoom: 16,
           mapTypeId: google.maps.MapTypeId.NORMAL,
           panControl: true,
           scaleControl: false,
@@ -22,8 +22,8 @@ function initialize() {
 
         var marker = new google.maps.Marker({
           position: {
-            lat: 37.7881736,
-            lng: -122.4002521
+            lat: 37.7889849,
+            lng: -122.4031839
           },
           map: map
         });
