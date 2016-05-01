@@ -1,84 +1,38 @@
 <% provide(:title, "Reservations | ") %>
 
+<div id="reserve_background">
 
-<div class="container reserve" style="padding-top:40px">
-  <div class="row">
-    <div class="col-md-6" style="color:black">
-      <h2 style="text-align:center">Reserve a Section</h1>
-      <p style="text-align:center">Minimum guests: 8</p>
-
-      <%= form_for(Contact.new) do |f| %>
-        <%= render 'shared/error_messages' %>
-
-        <%= f.text_field :name, placeholder: "Name", class: 'form-control' %>
-
-        <%= f.email_field :email, placeholder: "Email", class: 'form-control'  %>
-
-        <%= f.text_field :phone, placeholder: "Phone", class: 'form-control' %>
-
-        <%= f.number_field :guests, placeholder: "Number of Guests", class: 'form-control'  %>
-
-        <%= f.text_field :date, placeholder: "Date", class: 'form-control', "data-provide" => 'datepicker' %>
-
-        <%= f.label :time %>
-        <%= f.time_field :time %>
-
-        <%= f.hidden_field :size, :value => "Table"  %>
-
-        <%= f.submit "Reserve", class: "btn btn-primary" %>
-      <% end %>
-    </div>
-
-    <div class="col-md-6" id="section_container">
-      <div id="section" class="img-rounded"></div>
-    </div>
-
-  </div>
-
-
-  <br>
-
-  <div class="row" style="padding-top:40px">
-    <div class="col-md-6" style="color:black">
-      <h2 style="text-align:center">Book a Private Party</h1>
-      <p style="text-align:center">
-        Bar minimum will be required <br>
-        Please include information about the type of event</p>
+  <div class="container form_box">
+    <h1 class="content">Request a table reservation</h1>
+    <p class="content">Minimum guests: 8</p>
 
       <%= form_for(Contact.new) do |f| %>
         <%= render 'shared/error_messages' %>
 
-        <%= f.text_field :name, placeholder: "Name", class: 'form-control' %>
+          <%= f.text_field :name, placeholder: "Name*",
+                            class: 'form-control, input_box' %>
 
-        <%= f.email_field :email, placeholder: "Email", class: 'form-control'  %>
+          <%= f.email_field :email, placeholder: "Email*",
+                            class: 'form-control, input_box'  %>
 
-        <%= f.text_field :phone, placeholder: "Phone", class: 'form-control' %>
+          <%= f.text_field :phone, placeholder: "Phone*",
+                            class: 'form-control, input_box' %>
 
-        <%= f.number_field :guests, placeholder: "Number of Guests", class: 'form-control'  %>
+          <%= f.number_field :guests, placeholder: "Number of Guests*",
+                            class: 'form-control, input_box' %>
 
-        <%= f.text_field :date, placeholder: "Date", class: 'form-control', "data-provide" => 'datepicker' %>
+            <%= f.text_field :date, placeholder: "Date*",
+                              class: 'form-control' %>
 
-        <%= f.label :time %>
-        <%= f.time_field :time %>
+            <%= f.time_field :time %>
 
-        <%= f.select :size, ['Mezzanine only', 'Full Bar'] %>
+          <%= f.hidden_field :size, :value => "Table"  %>
 
-        <p>Please provide some information about the type of party or event:</p>
-        <%= f.text_field :info %>
-
-        <%= f.submit "Reserve", class: "btn btn-primary" %>
+          <%= f.submit "Request", class: "btn btn-primary" %>
       <% end %>
-    </div>
 
-
-
-    <div class="col-md-6" id="full_bar_container">
-      <div id="full_bar" class="img-rounded"></div>
-    </div>
+    <br>
+    <p>*required</p>
 
   </div>
-
-
-  <br>
-
 </div>

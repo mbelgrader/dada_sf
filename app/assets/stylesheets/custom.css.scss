@@ -1,71 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0b1 | 201101
-   NOTE: WORK IN PROGRESS
-   USE WITH CAUTION AND TEST WITH ABANDON */
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-body {
-    line-height: 1;
-    background: none;
-}
-ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-
-/* remember to highlight inserts somehow! */
-ins {
-    text-decoration: none;
-}
-del {
-    text-decoration: line-through;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-
-/*begin our styles*/
+/*layout*/
 
 body {
-    font: 16px/1.4em 'Optima','PT Sans', sans-serif;;
-    color: #1c1c1c;
+    // font: 16px/1.4em 'Optima','PT Sans', sans-serif;;
+    color: white;
+    background-color: #181818;
   /*  background-color: black; */
 }
 
@@ -83,22 +24,25 @@ a {
     color: #1D745A;
 }
 
+h1 {
+  margin-bottom: 20px;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 2em;
+  color: #FFF;
+}
+
 h2 {
-    font-family: 'PT Serif', serif;
+    // font-family: 'PT Serif', serif;
     font-size: 1.2rem;
     line-height: 1.4em;
     margin: 0 0 .4em;
     font-weight: bold;
-    color: black;
 }
 
-  p {
-      color: black;
-  }
-
-
-/*layout*/
-
+div {
+  display: block;
+}
 
 
 /*header*/
@@ -124,51 +68,21 @@ header {
             zoom:1;
         }
 
-h1.logo {
-    color: #d8d8d8;
-    font-family: 'PT Serif', serif;
-    font-size: 20px;
-    line-height: 22px;
-    float: left;
-    letter-spacing: 0.2em;
-}
 
  .content {
    text-align: center;
  }
 
-
-.menu {
-    float: right;
-    color: #d8d8d8;
-    text-decoration: none;
-    padding: 0 10px;
-    font-size: 12px;
-    height: 22px;
-    letter-spacing: 0.1em;
-    border-style: solid;
-    border-color: white;
-    border-width: 1px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 4px;
-}
-
-.menu:hover,
-.menu:focus {
-    color: #1c1c1c;
-    background: #ccc;
-}
-
-
 /* footer */
 
 footer {
+  position:relative;
+  left:0px;
+  bottom:0px;
+  width:100%;
   height: 100%;
-  background-color: black;
-  margin-right: 0;
-  margin-top: 20px;
-  padding-top: 25px;
+  background-color: #1c1c1c;
+  padding-top: 20px;
 }
 
 footer p {
@@ -178,6 +92,17 @@ footer p {
 
 
 /*navigation*/
+h1.logo {
+    color: #d8d8d8;
+    font-family: 'PT Serif', serif;
+    font-size: 20px;
+    line-height: 22px;
+    float: left;
+    letter-spacing: 0.2em;
+    margin: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
 
 #mobile_nav ul {
     list-style: none;
@@ -200,7 +125,6 @@ footer p {
 
 #mobile_nav li a:hover,
 #mobile_nav li a:focus {
-    color: gray;
     background: none;
 }
 
@@ -228,7 +152,6 @@ footer p {
 
 #desktop_nav li a:hover,
 #desktop_nav li a:focus {
-    color: gray;
     font-weight: bold;
 }
 
@@ -242,42 +165,39 @@ footer p {
    background-size: 100% 100%;
  }
 
- .book {
-   text-decoration: none;
-   font-weight: bold;
-   padding: 5px 10px;
-/*   font-family: 'PT Serif', serif*/
-   font-size: 18px;
-   margin: 0 0 .4em;
-   text-transform: uppercase;
-   letter-spacing: 0.1em;
-   background-color: none;
-   /*
-   border-style: solid;
-   border-color: gray;
-   border-width: 2px;
-   border-radius: 4px;
-   -webkit-border-radius: 4px;
-   -moz-border-radius: 4px;
-   */
- }
+//  .book {
+//    text-decoration: none;
+//    font-weight: bold;
+//    padding: 5px 10px;
+// /*   font-family: 'PT Serif', serif*/
+//    font-size: 18px;
+//    margin: 0 0 .4em;
+//    text-transform: uppercase;
+//    letter-spacing: 0.1em;
+//    background-color: none;
+//    /*
+//    border-style: solid;
+//    border-color: gray;
+//    border-width: 2px;
+//    border-radius: 4px;
+//    -webkit-border-radius: 4px;
+//    -moz-border-radius: 4px;
+//    */
+//  }
 
- .book:hover,
- .book:focus {
-   color: $gray;
-   font-weight: bold;
-   text-decoration: none;
-   cursor: pointer;
- }
+ // .book:hover,
+ // .book:focus {
+ //   color: $gray;
+ //   font-weight: bold;
+ //   text-decoration: none;
+ //   cursor: pointer;
+ // }
 
  /* reservations */
 
-   .form {
-     padding-top: 40px;
-     padding-bottom: 40px;
-   }
 
-   #error_explanation {
+
+  #error_explanation {
     color: red;
     ul {
       color: red;
@@ -292,14 +212,54 @@ footer p {
     -moz-box-sizing:    border-box;
     -webkit-box-sizing: border-box;
     box-sizing:         border-box;
+    // -webkit-text-fill-color: yellow !important;
+    -webkit-box-shadow: 0 0 0px 1000px #181818 inset;
   }
 
-  input {
+  input, textarea {
     height: auto !important;
   }
 
-  .reserve {
-    padding-top: 10px;
+input[type='text'],
+input[type='number'], textarea,
+input[type='button'],
+input[type='email'],
+input[type='time'] {
+  background: #181818;
+  padding: 8px 12px;
+  font-size: 1em;
+  border: 1px solid #2d2d2d;
+  outline: none;
+  color:white;
+  // -webkit-transition: all 0.2s ease-in-out 0s;
+}
+
+  .form_box {
+    position: relative;
+    top: 40px;
+    background-color: black;
+    text-align: left;
+    max-width: 720px;
+    border: 1px solid #2e2e2e;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding: 0px 20px 20px 20px;
+  }
+
+  .btn-primary {
+    // border-radius: .1;
+    border: 1px solid red;
+  }
+
+  #reserve_background {
+    background: image-url("liquor_blue.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 700px;
+    min-height: 300px;
+    // margin: auto;
+    // padding-left: 25px;
+    // padding-right: 25px;
   }
 
   #section {
@@ -341,6 +301,10 @@ footer p {
   #forgot_pass {
     margin-top: 20px;
     text-align: center;
+  }
+
+  .login {
+    background-color: black;
   }
 
 
