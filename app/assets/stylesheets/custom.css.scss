@@ -390,12 +390,12 @@ input[type='time'] {
       font-size: 2em;
   }
 
-  .jumbotron {
-    background: image-url("home_drinks.jpg");
-    background-repeat: no-repeat;
-    min-height: 200px;
+  .slide {
+    max-height: 200px;
     width: 100%;
-    background-size: 100% 100%;
+  }
+  .carousel{
+height: 200px;
   }
 
   section .row img {
