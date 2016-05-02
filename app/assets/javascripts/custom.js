@@ -8,13 +8,13 @@ $(document).ready(function(){
     // Display backdrop and lightbox
     $(".backdrop").show();
     $(".box").show();
+
+    // Add image to lightbox
+    $("div.box").html('<img src="' + image_src + '" />');
     // Center the lightbox on the screen
     $("div.box").position({
         of: $(window)
     });
-    // Add image to lightbox
-    $("div.box").html('<img src="' + image_src + '" />');
-
     // var box_height = $("div.box").height();
     // $("img.box").css("height", box_height);
     // Exit by clicking backdrop
