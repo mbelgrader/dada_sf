@@ -15,8 +15,8 @@
   </div>
 
   <!-- images -->
-  <div class="gallery" style="padding-top:20px">
-      <div class="single">
+  <div style="padding-top:20px">
+      <div class="gallery">
           <% @photos.each do |photo| %>
                 <%= image_tag photo.image.url(:large) %>
           <% end %>

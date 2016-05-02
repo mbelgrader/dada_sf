@@ -1,6 +1,6 @@
 $(document).ready(function(){
   // Adjust image size to thumbnails
-  $("img").width(300).height(300);
+  $("div.gallery img").width(300).height(300);
 
   $("img").click(function() {
     // Save clicked image src
