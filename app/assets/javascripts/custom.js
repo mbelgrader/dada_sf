@@ -1,16 +1,23 @@
 $(document).ready(function(){
-  $(".backdrop").hide();
+  // Adjust image size to thumbnails
+  $("img").width(300).height(300);
 
   $("img").click(function() {
-    //save clicked image src
+    // Save clicked image src
     var image_src = $(this).attr("src");
-    //display backdrop and lightbox
+    // Display backdrop and lightbox
     $(".backdrop").show();
     $(".box").show();
-    //add image to lightbox
+    // Add image to lightbox
     $("div.box").html('<img src="' + image_src + '" />');
+    // Center the lightbox on the screen
+    $("div.box").position({
+        of: $(window)
+    });
 
-   //exit by clicking backdrop
+    // var box_height = $("div.box").height();
+    // $("img.box").css("height", box_height);
+    // Exit by clicking backdrop
     $("div.backdrop").click(function() {
       $(".box, .backdrop").hide();
     })

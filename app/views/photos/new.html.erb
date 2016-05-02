@@ -5,7 +5,7 @@
 </div>
 
 <div class="container content">
-  
+
   <!-- upload form -->
   <div class="container" style="width:50%">
     <%= form_for (@photo), url: photos_path, html: { multipart: true } do |f| %>
@@ -15,10 +15,10 @@
   </div>
 
   <!-- images -->
-  <div class="imageRow" style="padding-top:20px">
+  <div class="gallery" style="padding-top:20px">
       <div class="single">
           <% @photos.each do |photo| %>
-                <%= image_tag photo.image.url(:medium) %>
+                <%= image_tag photo.image.url(:large) %>
           <% end %>
       </div>
   </div>
