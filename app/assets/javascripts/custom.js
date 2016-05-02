@@ -5,13 +5,13 @@ $(document).ready(function(){
   $("img").click(function() {
     // Save clicked image src
     var image_src = $(this).attr("src");
+    // Display backdrop and lightbox
+    $(".backdrop").show();
+    $(".box").show();
     // Center the lightbox on the screen
     $("div.box").position({
         of: $(window)
     });
-    // Display backdrop and lightbox
-    $(".backdrop").show();
-    $(".box").show();
     // Add image to lightbox
     $("div.box").html('<img src="' + image_src + '" />');
 
