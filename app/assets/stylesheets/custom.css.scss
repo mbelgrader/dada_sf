@@ -67,6 +67,7 @@ header {
 
  .content {
    text-align: center;
+   padding-bottom: 20px;
  }
 
 /* footer */
@@ -159,6 +160,48 @@ h1.logo {
   max-height: 200px;
 }
 
+.thumbnail {
+  width: 200px;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .5;
+  filter:alpha(opacity=0);
+  z-index: 50;
+
+}
+
+.box {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 500px;
+  height: 300px;
+  background: black;
+  z-index: 51;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0px 0px 5px #444444;
+  -webkit-box-shadow: 0px 0px 5px #444444;
+  box-shadow: 0px 0px 5px #444444;
+  display: none;
+}
+
+.box img {
+  max-width:100%;
+  max-height:100%;
+}
+
+
+
 //  .book {
 //    text-decoration: none;
 //    font-weight: bold;
@@ -189,8 +232,6 @@ h1.logo {
 
  /* reservations */
 
-
-
   #error_explanation {
     color: red;
     ul {
@@ -214,22 +255,22 @@ h1.logo {
     height: auto !important;
   }
 
-input[type='text'],
-input[type='number'], textarea,
-input[type='button'],
-input[type='email'],
-input[type='time'],
-input[type='password'] {
-  background: #181818;
-  padding: 8px 12px;
-  font-size: 1em;
-  border: 1px solid #2d2d2d;
-  outline: none;
-  color:white;
-  // &:focus {
-  //   -webkit-transition: all 0.2s ease-in-out 0s;
-  // }
-}
+  input[type='text'],
+  input[type='number'], textarea,
+  input[type='button'],
+  input[type='email'],
+  input[type='time'],
+  input[type='password'] {
+    background: #181818;
+    padding: 8px 12px;
+    font-size: 1em;
+    border: 1px solid #2d2d2d;
+    outline: none;
+    color: white;
+    // &:focus {
+    //   -webkit-transition: all 0.2s ease-in-out 0s;
+    // }
+  }
 
   .form_box {
     position: relative;

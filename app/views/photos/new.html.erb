@@ -5,27 +5,26 @@
 </div>
 
 <div class="container content">
-
-
-
+  
+  <!-- upload form -->
   <div class="container" style="width:50%">
     <%= form_for (@photo), url: photos_path, html: { multipart: true } do |f| %>
-
         <%= f.file_field :image %>
-
         <%= f.submit "Add Photo", class: "btn btn-primary" %>
-
     <% end %>
   </div>
 
+  <!-- images -->
   <div class="imageRow" style="padding-top:20px">
       <div class="single">
           <% @photos.each do |photo| %>
-            <%= link_to image_path(photo.image, :rel=>"lightbox", :title=>"my caption") do %>
                 <%= image_tag photo.image.url(:medium) %>
-            <% end %>
           <% end %>
       </div>
   </div>
+
+  <!-- lightbox -->
+  <div class="backdrop"></div>
+  <div class="box"></div>
 
 </div>
