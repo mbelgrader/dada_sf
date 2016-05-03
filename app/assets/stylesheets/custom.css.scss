@@ -175,13 +175,9 @@ h1.logo {
 
 .box {
   position:fixed; /* keeps the lightbox window in the current viewport */
-  //
-  // margin: auto;
-  top: 50%;
-  left: 50%;
-/* bring your own prefixes */
-  transform: translate(-50%, -50%);
-  
+  top:10%;
+  left:10%;
+  margin: auto;
   max-width: 80%;
   max-height: 80%;
   background: black;
@@ -199,6 +195,7 @@ h1.logo {
 .box img {
   // max-height: 80%;
 }
+
 
 
 //  .book {
