@@ -22,5 +22,4 @@ $(document).ready(function(){
       $(".box, .backdrop").hide();
     })
   })
-
 });
