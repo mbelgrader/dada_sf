@@ -2,7 +2,12 @@ $(document).ready(function(){
   // Adjust image size to thumbnails
   $("div.gallery img").width(300).height(300);
 
+
   $("img").click(function() {
+    
+    $("div.box").position({
+        of: $(window)
+    });
     // Save clicked image src
     var image_src = $(this).attr("src");
     // Display backdrop and lightbox
