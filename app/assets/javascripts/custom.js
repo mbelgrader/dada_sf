@@ -5,9 +5,6 @@ $(document).ready(function(){
 
   $("img").click(function() {
     
-    $("div.box").position({
-        of: $(window)
-    });
     // Save clicked image src
     var image_src = $(this).attr("src");
     // Display backdrop and lightbox
