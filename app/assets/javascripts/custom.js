@@ -14,9 +14,7 @@ $(document).ready(function(){
     // Add image to lightbox
     $("div.box").html('<img src="' + image_src + '" />');
     // Center the lightbox on the screen
-    // $("div.box").position({
-    //     of: $(window)
-    // });
+
     // var box_height = $("div.box").height();
     // $("img.box").css("height", box_height);
     // Exit by clicking backdrop
