@@ -1,0 +1,38 @@
+<% provide(:title, "Reservations | ") %>
+
+<div id="reserve_background">
+
+  <div class="container form_box">
+    <h1 class="center">Request our Venue</h1>
+    <p class="center">for a Private Party or Event</p>
+
+      <%= form_for(Contact.new) do |f| %>
+        <%= render 'shared/error_messages' %>
+
+          <%= f.text_field :name, placeholder: "Name*",
+                            class: 'form-control' %>
+
+          <%= f.email_field :email, placeholder: "Email*",
+                            class: 'form-control'  %>
+
+          <%= f.text_field :phone, placeholder: "Phone*",
+                            class: 'form-control' %>
+
+          <%= f.number_field :guests, placeholder: "Number of Guests*",
+                            class: 'form-control' %>
+
+          <%= f.text_field :date, placeholder: "Date*",
+                            class: 'form-control' %>
+
+          <%= f.time_field :time %>
+
+          <%= f.hidden_field :size, :value => "Table"  %>
+
+          <%= f.submit "Request", class: "btn btn-primary" %>
+      <% end %>
+
+    <br>
+    <p>*required</p>
+
+  </div>
+</div>

@@ -1,21 +1,19 @@
 Rails.application.routes.draw do
-  get 'photos/new'
-
+  get 'contacts/parties'
   get 'password_resets/new'
-
   get 'password_resets/edit'
-
   get 'sessions/new'
 
   root 'static_pages#home'
-  get     'about'        => 'static_pages#about'
-  get     'gallery'      => 'photos#new'
-  get     'reservations' => 'contacts#new'
-  get     'location'     => 'static_pages#location'
-  get     'index'        => 'contacts#index'
-  get     'login'        => 'sessions#new'
-  post    'login'        => 'sessions#create'
-  delete  'logout'       => 'sessions#destroy'
+  get     'about'           => 'static_pages#about'
+  get     'gallery'         => 'photos#new'
+  get     'reservations'    => 'contacts#new'
+  get     'parties'         => 'contacts#parties'
+  get     'location'        => 'static_pages#location'
+  get     'index'           => 'contacts#index'
+  get     'login'           => 'sessions#new'
+  post    'login'           => 'sessions#create'
+  delete  'logout'          => 'sessions#destroy'
   resources :contacts
   resources :users
   resources :password_resets, only: [:new, :create, :edit, :update]

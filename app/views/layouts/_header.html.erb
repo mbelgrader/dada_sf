@@ -3,9 +3,10 @@
       <h1 class="logo">DADA</h1>
     <% end %>
 
-
+    <!-- Desktop navigation -->
     <nav id="desktop_nav">
       <ul>
+      <!-- Admin dropdown -->
       <% if logged_in? %>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -24,14 +25,26 @@
           </ul>
         </li>
       <% end %>
-
+        <!-- Site Links -->
         <li><%= link_to "About",        'about' %></li>
         <li><%= link_to "Location",     'location', data: { no_turbolink: true } %></li>
         <li><%= link_to "Gallery",      'gallery' %></li>
-        <li><%= link_to "Reservations", 'reservations' %></li>
+        <!-- Reservation Dropdown -->
+        <li class="dropdown" id="reserve_dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Reservations
+            <!-- <b class="caret"></b> -->
+          </a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Tables", 'reservations' %></li>
+            <li><%= link_to "Private Party", 'parties' %></li>
+          </ul>
+        </li>
+
       </ul>
     </nav>
 
+    <!-- Mobile navigation -->
     <nav id="mobile_nav">
       <li class="dropdown">
 
@@ -45,7 +58,9 @@
           <li><%= link_to "About",        'about' %></li>
           <li><%= link_to "Location",     'location', data: { no_turbolink: true } %></li>
           <li><%= link_to "Gallery",      'gallery' %></li>
-          <li><%= link_to "Reservations", 'reservations' %></li>
+          <li class="divider"></li>
+          <li><%= link_to "Reserve Table", 'reservations' %></li>
+          <li><%= link_to "Private Party", 'parties' %></li>
         </ul>
       </li>
     </nav>
