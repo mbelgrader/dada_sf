@@ -26,24 +26,27 @@
 <!-- <% end %> -->
 
 <!-- events list -->
-<div class="container">
+<div class="container center" style="padding-bottom:20px">
   <%= will_paginate %>
-  <table class="contacts table" %>
+  <table>
     <% @events.each do |event| %>
-      <tr>
-        <td><%= event.date %></td>
-        <td><%= event.name %></td>
+      <tr class="events">
+        <td id="event_date"><%= event.date %></td>
+        <td id="event_name"><%= event.name %></td>
         <!-- <td><%= event.time %></td> -->
-        <td><%= event.info %></td>
         <% if logged_in? %>
         <td><%= link_to "delete", event, method: :delete,
                                     data: { confirm: "You sure?" } %></td>
         <% end %>
-
+      </tr>
+      <tr>
+        <td><br></td>
+        <td><%= event.info %></td>
       <!-- <% if event.flyer != nil %>
           <td><%= image_tag event.flyer.url(:thumb) %></td>
       <% end %> -->
       </tr>
+      <tr><td><br></td></tr>
     <% end %>
   </table>
   <%= will_paginate %>
