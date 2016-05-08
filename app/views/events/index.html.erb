@@ -31,8 +31,8 @@
   <table>
     <% @events.each do |event| %>
       <tr class="events">
-        <td id="event_date"><%= event.date %></td>
-        <td id="event_name"><%= event.name %></td>
+        <td id="date_red"><%= event.date %></td>
+        <td id="name_listing"><%= event.name %></td>
         <!-- <td><%= event.time %></td> -->
         <% if logged_in? %>
         <td><%= link_to "delete", event, method: :delete,

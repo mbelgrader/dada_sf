@@ -259,14 +259,14 @@ h1.logo {
     background: image-url("nick_flatt_cig.jpg");
 }
 
-#event_date {
+#date_red {
   background-color: red;
   padding: 5px;
   font-size: 2em;
   text-transform: uppercase;
 }
 
-#event_name {
+#name_listing {
   padding: 5px;
   font-size: 2em;
 }
@@ -429,8 +429,7 @@ tr.events {
 
   .login {
     background-color: black;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 80px 40px 80px;
   }
 
 
