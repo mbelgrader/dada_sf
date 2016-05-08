@@ -1,0 +1,25 @@
+
+<div class="container">
+  <br>
+  <h1 style="text-align:center">Events</h1>
+
+  <%= will_paginate %>
+
+  <table class="contacts table" %>
+
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.date %></td>
+        <td><%= event.name %></td>
+        <!-- <td><%= event.time %></td> -->
+        <td><%= event.info %></td>
+        <% if logged_in? %>
+        <td><%= link_to "delete", event, method: :delete,
+                                    data: { confirm: "You sure?" } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+
+  <%= will_paginate %>
+</div>

@@ -21,8 +21,8 @@
           <%= f.number_field :guests, placeholder: "Number of Guests*",
                             class: 'form-control' %>
 
-          <%= f.text_field :date, placeholder: "Date*",
-                            class: 'form-control' %>
+          <%= f.text_field :date, placeholder: "Date ( YYYY-MM-DD )",
+                            class: 'form-control', "data-provide" => 'datepicker' %>
 
           <%= f.time_field :time %>
 

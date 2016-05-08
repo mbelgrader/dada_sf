@@ -54,3 +54,24 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
+
+
+  <div class="container events">
+    <h1 class="events">Upcoming Events</h1>
+
+    <table class="contacts table" %>
+      <% @events.limit(5).each do |event| %>
+        <tr>
+          <td><%= event.date %></td>
+          <td><%= event.name %></td>
+          <!-- <td><%= event.time %></td> -->
+          <td><%= event.info %></td>
+          <% if logged_in? %>
+          <td><%= link_to "delete", event, method: :delete,
+                                      data: { confirm: "You sure?" } %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </table>
+    <%= link_to "View All", 'events' %>
+  </div>
