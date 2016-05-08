@@ -1,12 +1,34 @@
-
-<div class="container">
-  <br>
+<!-- banner -->
+<div class="jumbotron" id="events_banner">
   <h1 style="text-align:center">Events</h1>
+</div>
 
+<!-- add event form -->
+<!-- <% if logged_in? %> -->
+  <div class="container" style="width:350px;padding-bottom:20px">
+      <%= form_for Event.new, url: events_path, html: { multipart: true } do |f| %>
+
+          <%= f.text_field :name, placeholder: "Name*",
+                            class: 'form-control' %>
+
+          <%= f.text_field :date, placeholder: "Date ( YYYY-MM-DD )",
+                            class: 'form-control', "data-provide" => 'datepicker' %>
+
+          <%= f.time_field :time %>
+
+          <%= f.text_field :info, placeholder: 'Additional Information' %>
+
+          <%= f.file_field :flyer%>
+
+          <%= f.submit "Add Event", class: "btn btn-primary" %>
+      <% end %>
+  </div>
+<!-- <% end %> -->
+
+<!-- events list -->
+<div class="container">
   <%= will_paginate %>
-
   <table class="contacts table" %>
-
     <% @events.each do |event| %>
       <tr>
         <td><%= event.date %></td>
@@ -17,9 +39,12 @@
         <td><%= link_to "delete", event, method: :delete,
                                     data: { confirm: "You sure?" } %></td>
         <% end %>
+
+      <!-- <% if event.flyer != nil %>
+          <td><%= image_tag event.flyer.url(:thumb) %></td>
+      <% end %> -->
       </tr>
     <% end %>
   </table>
-
   <%= will_paginate %>
 </div>

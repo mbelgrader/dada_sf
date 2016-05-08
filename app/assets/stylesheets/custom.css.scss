@@ -159,9 +159,12 @@ h1.logo {
 /* gallery */
 
 .jumbotron {
-  background: image-url("gallery_noir.jpg");
   background-repeat: no-repeat;
   max-height: 200px;
+}
+
+#gallery_banner {
+  background: image-url("gallery_noir.jpg");
 }
 
 .backdrop {
@@ -250,6 +253,10 @@ h1.logo {
 .events {
   text-transform: none;
   text-align: center;
+}
+
+#events_banner {
+    background: image-url("nick_flatt_cig.jpg");
 }
 
  /* reservations */

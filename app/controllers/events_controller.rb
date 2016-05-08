@@ -17,9 +17,9 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     if @event.save
       flash.now[:success] = "Event added"
-      render 'new'
+      redirect_to events_url
     else
-      render 'new'
+      redirect_to events_url
     end
   end
 
@@ -31,8 +31,8 @@ class EventsController < ApplicationController
 
   private
 
-    def contact_params
-      params.require(:event).permit(:name, :date, :time, :info)
+    def event_params
+      params.require(:event).permit(:name, :date, :time, :info, :flyer)
     end
 
     # Before filters

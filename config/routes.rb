@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
   get 'events/index'
-
   get 'contacts/parties'
   get 'password_resets/new'
   get 'password_resets/edit'
   get 'sessions/new'
 
-  root 'static_pages#home' 
+  root 'static_pages#home'
   get     'about'           => 'static_pages#about'
   get     'gallery'         => 'photos#new'
   get     'reservations'    => 'contacts#new'
