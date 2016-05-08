@@ -261,10 +261,6 @@ h1.logo {
 
  /* reservations */
 
- .datepicker-days {
-   background-color: black;
- }
- 
   #error_explanation {
     color: red;
     ul {
@@ -375,6 +371,21 @@ h1.logo {
     float: right;
   }
 
+  /* datepicker */
+  .datepicker-days {
+    background-color: black;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  th.datepicker-switch, .next, .prev {
+    background-color: #181818;
+  }
+
+  .datepicker {
+    background-color: red;
+  }
 
  /* location */
 
