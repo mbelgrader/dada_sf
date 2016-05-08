@@ -26,7 +26,9 @@
 
           <%= f.time_field :time %>
 
-          <%= f.hidden_field :size, :value => "Table"  %>
+          <%= f.select :size, ['Select Venue Size', 'Mezzanine only', 'Full Bar'] %>
+
+          <%= f.text_field :info, placeholder: 'Please provide some information about the type of party or event.' %>
 
           <%= f.submit "Request", class: "btn btn-primary" %>
       <% end %>
