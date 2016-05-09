@@ -127,6 +127,7 @@ h1.logo {
 #mobile_nav li a:hover,
 #mobile_nav li a:focus {
     background: none;
+    color: red;
 }
 
 /* desktop nav */
@@ -148,13 +149,11 @@ h1.logo {
     letter-spacing: 0.1em;
     line-height: 2em;
     height: 2em;
+    &:hover {
+      color: red;
+    }
 }
 
-
-#desktop_nav li a:hover,
-#desktop_nav li a:focus {
-    font-weight: bold;
-}
 
 /* gallery */
 
