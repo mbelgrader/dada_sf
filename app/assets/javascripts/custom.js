@@ -1,4 +1,7 @@
 $(document).ready(function(){
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
   // Adjust image size to thumbnails
   $("div.gallery img").width(300).height(300);
 
