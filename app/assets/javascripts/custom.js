@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+  // Color nav links red on hover
   $("li a").mouseover(function() {
     $(this).css('color', 'red');
   })
@@ -8,6 +9,17 @@ $(document).ready(function(){
     $(this).css('color', '#d8d8d8');
   })
 
+  // Dropdown on hover
+  $("#reserve_dropdown").mouseover(function() {
+    $("#reserve_list").show();
+  })
+
+  $("#reserve_dropdown").mouseout(function() {
+    $("#reserve_list").hide();
+  })
+
+
+// ---------- Lightbox ----------
   // Adjust image size to thumbnails
   $("div.gallery img").width(300).height(300);
   $("div.gallery img")
