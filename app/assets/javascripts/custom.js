@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+  $("li a").mouseover(function() {
+    $(this).css('color', 'red');
+  })
+
+  $("li a").mouseout(function() {
+    $(this).css('color', '#d8d8d8');
+  })
+
   // Adjust image size to thumbnails
   $("div.gallery img").width(300).height(300);
   $("div.gallery img")

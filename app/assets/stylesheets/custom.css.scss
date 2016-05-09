@@ -104,6 +104,16 @@ div.social_media {
   margin-bottom: 0;
 }
 
+p a {
+  color: red;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: red;
+  }
+}
+
 /*navigation*/
 h1.logo {
     color: #d8d8d8;
@@ -147,7 +157,7 @@ h1.logo {
 #desktop_nav ul {
     list-style: none;
     background: #1c1c1c;
-    padding: 5px 0;
+    padding: 10px 0;
 }
 
 #desktop_nav li a {
@@ -266,6 +276,11 @@ h1.logo {
   text-align: center;
 }
 
+#events_container {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
 #events_banner {
     background: image-url("nick_flatt_cig.jpg");
 }
@@ -286,8 +301,7 @@ tr.events {
   border-top: 1px solid white;
 }
 
-td
-{
+td {
     padding:0 25px 25px 25px;
 }
 
