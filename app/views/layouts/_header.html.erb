@@ -50,10 +50,10 @@
       <li class="dropdown">
 
         <a href="#" class="dropdown-toggle menu" data-toggle="dropdown">
-          Menu
+          <%= image_tag src="menu.png", height: "20px", color: "white", id: "menu" %>
         </a>
 
-        <ul class="dropdown-menu dropdown-menu-right">
+        <ul class="dropdown-menu dropdown-menu-right" style="list-style:none">
           <li><%= link_to "Home",        root_path %></li>
           <li class="divider"></li>
           <li><%= link_to "About",        'about' %></li>

@@ -127,6 +127,14 @@ h1.logo {
     vertical-align: baseline;
 }
 
+#menu {
+  height: 25px;
+}
+
+li.dropdown {
+  list-style: none;
+}
+
 #mobile_nav ul {
     list-style: none;
     background: #1c1c1c;
@@ -175,7 +183,6 @@ h1.logo {
       color: red;
     }
 }
-
 
 /* gallery */
 
@@ -550,7 +557,7 @@ td {
     width: 100%;
   }
   .carousel{
-height: 200px;
+    height: 200px;
   }
 
   section .row img {
@@ -575,6 +582,14 @@ height: 200px;
     background-repeat: no-repeat;
     width: 100%;
     background-size: 100% 100%;
+  }
+
+  #left_arrow {
+    font-size: 1em;
+  }
+
+  #right_arrow {
+    font-size: 1em;
   }
 
 

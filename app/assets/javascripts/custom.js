@@ -18,13 +18,12 @@ $(document).ready(function(){
     $("#reserve_list").hide();
   })
 
-
 // ---------- Lightbox ----------
   // Adjust image size to thumbnails
   $("div.gallery img").width(300).height(300);
   $("div.gallery img")
 
-  $("img").click(function() {
+  $("div.gallery img").click(function() {
     // Save clicked image src
     var image_src = $(this).attr("src");
     var next_image = $(this).next().attr("src");
