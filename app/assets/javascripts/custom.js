@@ -26,8 +26,7 @@ $(document).ready(function(){
   $("div.gallery img").click(function() {
     // Save clicked image src
     var image_src = $(this).attr("src");
-    var next_image = $(this).next().attr("src");
-    var prev_image = $(this).prev().attr("src");
+    current_li = $(this).parent();
     // Display backdrop and lightbox
     $(".backdrop").show();
     $(".box").show();
@@ -37,12 +36,17 @@ $(document).ready(function(){
 
     // Arrows
     $("#right_arrow").click(function() {
-      $("div.box img").attr("src", next_image);
-      image_src = next_image;
+      var next_li = current_li.next();
+      var next_src = next_li.children("img").attr("src");
+      $("div.box img").attr("src", next_src);
+      current_li = next_li;
     })
 
     $("#left_arrow").click(function() {
-      $("div.box img").attr("src", prev_image);
+      var prev_li = current_li.prev();
+      var prev_src = prev_li.children("img").attr("src");
+      $("div.box img").attr("src", prev_src);
+      current_li = prev_li;
     })
 
     // Exit by clicking backdrop

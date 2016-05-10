@@ -1,7 +1,7 @@
 <% provide(:title, "Gallery | ") %>
 
 <div class="jumbotron" id="gallery_banner">
-      <h1 style="text-align:center">Gallery</h1>
+  <h1 style="text-align:center">Gallery</h1>
 </div>
 
 <div class="container content">
@@ -9,20 +9,20 @@
   <!-- upload form -->
   <% if logged_in? %>
     <div class="container" style="width:50%">
-        <%= form_for (@photo), url: photos_path, html: { multipart: true } do |f| %>
-            <%= f.file_field :image%>
-            <%= f.submit "Add Photo", class: "btn btn-primary" %>
-        <% end %>
+      <%= form_for (@photo), url: photos_path, html: { multipart: true } do |f| %>
+          <%= f.file_field :image%>
+          <%= f.submit "Add Photo", class: "btn btn-primary" %>
+      <% end %>
     </div>
   <% end %>
 
   <!-- images -->
   <div style="padding-top:20px">
-      <div class="gallery">
-          <% @photos.each do |photo| %>
-                <%= image_tag photo.image.url(:large) %>
-          <% end %>
-      </div>
+    <div class="gallery">
+        <% @photos.each do |photo| %>
+          <li class="gallery"><%= image_tag photo.image.url(:large) %></li>
+        <% end %>
+    </div>
   </div>
 
   <!-- lightbox -->
