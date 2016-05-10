@@ -14,8 +14,6 @@
           <%= f.text_field :date, placeholder: "Date ( YYYY-MM-DD )",
                             class: 'form-control', "data-provide" => 'datepicker' %>
 
-          <%= f.time_field :time %>
-
           <%= f.text_field :info, placeholder: 'Additional Information' %>
 
           <%= f.file_field :flyer%>
@@ -30,21 +28,26 @@
   <%= will_paginate %>
   <table>
     <% @events.each do |event| %>
+      <!-- Date and headline -->
       <tr class="events">
         <td id="date_red"><%= event.date %></td>
         <td id="name_listing"><%= event.name %></td>
-        <!-- <td><%= event.time %></td> -->
         <% if logged_in? %>
         <td><%= link_to "delete", event, method: :delete,
                                     data: { confirm: "You sure?" } %></td>
         <% end %>
       </tr>
+      <!-- event details -->
       <tr>
         <td><br></td>
         <td><%= event.info %></td>
-      <!-- <% if event.flyer != nil %>
-          <td><%= image_tag event.flyer.url(:thumb) %></td>
-      <% end %> -->
+      </tr>
+      <!-- flyer -->
+      <tr>
+        <td><br></td>
+        <% if event.flyer.file? %>
+          <td><%= image_tag event.flyer.url(:large) %></td>
+        <% end %>
       </tr>
     <% end %>
   </table>
