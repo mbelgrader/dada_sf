@@ -21,17 +21,27 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     if @contact.save
       UserMailer.info(@contact).deliver_now
-      flash.now[:success] = "Thank you! We will be in touch."
-      render 'new'
-    else
-      render 'new'
+    end
+    respond_to do |format|
+      if @contact.save
+        format.html { render action: "new" }
+        format.json { render json: @contact, status: :created, location: @contact }
+        format.js   { render js: "window.location.href='"+reservations_path+"'"}
+      else
+        format.html { render action: "new" }
+        format.json { render json: @contact.errors, status: :unprocessable_entity }
+        format.js
+      end
     end
   end
 
   def destroy
+    @contact = Contact.find(params[:id])
     Contact.find(params[:id]).destroy
-    flash[:success] = "Reservation deleted"
-    redirect_to index_url
+    respond_to do |format|
+      format.html { redirect_to index_url }
+      format.js
+    end
   end
 
   private

@@ -62,7 +62,7 @@
     <table class="contacts table" %>
       <% @events.limit(5).each do |event| %>
         <tr>
-          <td><%= event.date %></td>
+          <td id="date_home"><%= event.date %></td>
           <td><%= event.name %></td>
           <!-- <td><%= event.time %></td> -->
           <td><%= event.info %></td>

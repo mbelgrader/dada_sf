@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+  // Delete contacts
+  $('.delete').click(function() {
+    $(this).closest("tr").remove();
+  })
+
   // Color nav links red on hover
   $("li a").mouseover(function() {
     $(this).css('color', 'red');

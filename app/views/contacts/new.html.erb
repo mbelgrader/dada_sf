@@ -2,12 +2,12 @@
 
 <div id="reserve_background">
 
-  <div class="container form_box">
+  <div class="container form_box request_form">
     <h1 class="center">Request a table reservation</h1>
     <p class="center">Minimum guests: 8</p>
 
-      <%= form_for(Contact.new) do |f| %>
-        <%= render 'shared/error_messages' %>
+      <%= form_for(Contact.new, remote: true) do |f| %>
+        <p id="list_errors"></p>
 
           <%= f.text_field :name, placeholder: "Name*",
                             class: 'form-control' %>

@@ -27,7 +27,7 @@
       <td><%= contact.size %></td>
       <td><%= contact.info %></td>
       <td><%= link_to "delete", contact, method: :delete,
-                                  data: { confirm: "You sure?" } %></td>
+                                   class: "delete", remote: true %></td>
     </tr>
   <% end %>
 </table>
