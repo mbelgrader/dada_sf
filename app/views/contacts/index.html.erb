@@ -1,7 +1,47 @@
 
 <div class="container">
 <br>
-<h1 style="text-align:center">Upcoming Reservations</h1>
+<h1 style="text-align:center">Table Requests</h1>
+
+<%= will_paginate %>
+
+<table class="contacts table" %>
+  <tr style="font-weight:bold">
+    <td>Name</td>
+    <td>Email</td>
+    <td>Phone</td>
+    <td>Guests</td>
+    <td>Date</td>
+    <td>Time</td>
+    <!-- <td>Size</td>
+    <td>Info</td> -->
+  </tr>
+  <% @contacts.each do |contact| %>
+    <tr>
+      <td><%= contact.name %></td>
+      <td><%= contact.email %></td>
+      <td><%= contact.phone %></td>
+      <td><%= contact.guests %></td>
+      <td><%= contact.date %></td>
+      <td><%= contact.time %></td>
+      <!-- <td><%= contact.size %></td>
+      <td><%= contact.info %></td> -->
+      <td><%= link_to "delete", contact, method: :delete,
+                                   class: "delete", remote: true %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= will_paginate %>
+</div>
+
+
+
+
+
+<div class="container">
+<br>
+<h1 style="text-align:center">Private Party Requests</h1>
 
 <%= will_paginate %>
 
@@ -16,17 +56,17 @@
     <td>Size</td>
     <td>Info</td>
   </tr>
-  <% @contacts.each do |contact| %>
+  <% @parties.each do |party| %>
     <tr>
-      <td><%= contact.name %></td>
-      <td><%= contact.email %></td>
-      <td><%= contact.phone %></td>
-      <td><%= contact.guests %></td>
-      <td><%= contact.date %></td>
-      <td><%= contact.time %></td>
-      <td><%= contact.size %></td>
-      <td><%= contact.info %></td>
-      <td><%= link_to "delete", contact, method: :delete,
+      <td><%= party.name %></td>
+      <td><%= party.email %></td>
+      <td><%= party.phone %></td>
+      <td><%= party.guests %></td>
+      <td><%= party.date %></td>
+      <td><%= party.time %></td>
+      <td><%= party.size %></td>
+      <td><%= party.info %></td>
+      <td><%= link_to "X", party, method: :delete,
                                    class: "delete", remote: true %></td>
     </tr>
   <% end %>
@@ -34,3 +74,9 @@
 
 <%= will_paginate %>
 </div>
+
+<script>
+$('.delete').click(function() {
+  $(this).closest("tr").remove();
+})
+</script>

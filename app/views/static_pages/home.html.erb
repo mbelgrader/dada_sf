@@ -67,7 +67,7 @@
           <!-- <td><%= event.time %></td> -->
           <td><%= event.info %></td>
           <% if logged_in? %>
-          <td><%= link_to "delete", event, method: :delete,
+          <td><%= link_to "X", event, method: :delete,
                                       data: { confirm: "You sure?" } %></td>
           <% end %>
         </tr>

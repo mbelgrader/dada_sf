@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160508124234) do
+ActiveRecord::Schema.define(version: 20160522073950) do
 
   create_table "contacts", force: :cascade do |t|
     t.string   "name"
@@ -37,6 +37,19 @@ ActiveRecord::Schema.define(version: 20160508124234) do
     t.string   "flyer_content_type"
     t.integer  "flyer_file_size"
     t.datetime "flyer_updated_at"
+  end
+
+  create_table "parties", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.integer  "guests"
+    t.date     "date"
+    t.time     "time"
+    t.string   "size"
+    t.text     "info"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "photos", force: :cascade do |t|

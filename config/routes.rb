@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  get 'parties/new'
+
   get 'events/index'
-  get 'contacts/parties'
+
   get 'password_resets/new'
   get 'password_resets/edit'
   get 'sessions/new'
@@ -9,7 +11,7 @@ Rails.application.routes.draw do
   get     'about'           => 'static_pages#about'
   get     'gallery'         => 'photos#new'
   get     'reservations'    => 'contacts#new'
-  get     'parties'         => 'contacts#parties'
+  get     'parties'         => 'parties#new'
   get     'location'        => 'static_pages#location'
   get     'index'           => 'contacts#index'
   get     'events'          => 'events#index'
@@ -17,6 +19,7 @@ Rails.application.routes.draw do
   post    'login'           => 'sessions#create'
   delete  'logout'          => 'sessions#destroy'
   resources :contacts
+  resources :parties
   resources :users
   resources :password_resets, only: [:new, :create, :edit, :update]
   resources :photos

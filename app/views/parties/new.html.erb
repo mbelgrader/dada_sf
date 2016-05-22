@@ -2,12 +2,12 @@
 
 <div id="reserve_background">
 
-  <div class="container form_box">
+  <div class="container form_box party_request">
     <h1 class="center">Request our Venue</h1>
     <p class="center">for a Private Party or Event</p>
 
-      <%= form_for(Contact.new) do |f| %>
-        <%= render 'shared/error_messages' %>
+      <%= form_for(Party.new, remote: true) do |f| %>
+        <p id="list_errors_party"></p>
 
           <%= f.text_field :name, placeholder: "Name*",
                             class: 'form-control' %>

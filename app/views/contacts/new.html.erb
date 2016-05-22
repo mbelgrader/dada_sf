@@ -2,7 +2,7 @@
 
 <div id="reserve_background">
 
-  <div class="container form_box request_form">
+  <div class="container form_box table_request">
     <h1 class="center">Request a table reservation</h1>
     <p class="center">Minimum guests: 8</p>
 
@@ -10,19 +10,20 @@
         <p id="list_errors"></p>
 
           <%= f.text_field :name, placeholder: "Name*",
-                            class: 'form-control' %>
+                            class: 'form-control', id: 'name' %>
 
           <%= f.email_field :email, placeholder: "Email*",
-                            class: 'form-control'  %>
+                            class: 'form-control', id: 'email'  %>
 
           <%= f.text_field :phone, placeholder: "Phone*",
-                            class: 'form-control' %>
+                            class: 'form-control', id: 'phone' %>
 
           <%= f.number_field :guests, placeholder: "Number of Guests*",
-                            class: 'form-control' %>
+                            class: 'form-control', id: 'guests' %>
 
-          <%= f.text_field :date, placeholder: "Date ( YYYY-MM-DD )",
-                            class: 'form-control', "data-provide" => 'datepicker' %>
+          <%= f.text_field :date, placeholder: "Date ( YYYY-MM-DD )*",
+                            class: 'form-control', "data-provide" => 'datepicker',
+                            id: 'date' %>
 
           <%= f.time_field :time %>
 

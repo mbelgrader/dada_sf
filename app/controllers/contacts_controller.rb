@@ -3,6 +3,7 @@ class ContactsController < ApplicationController
 
   def index
     @contacts = Contact.order(date: :desc).paginate(page: params[:page])
+    @parties = Party.order(date: :desc).paginate(page: params[:page])
   end
 
   def show
@@ -10,10 +11,6 @@ class ContactsController < ApplicationController
   end
 
   def new
-    @contact = Contact.new
-  end
-
-  def parties
     @contact = Contact.new
   end
 
