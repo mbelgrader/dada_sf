@@ -21,6 +21,9 @@
     <div class="gallery">
         <% @photos.each do |photo| %>
           <li class="gallery"><%= image_tag photo.image.url(:large) %></li>
+          <% if logged_in? %>
+            <%= link_to "X (left)", photo, method: :delete %>
+          <% end %>
         <% end %>
     </div>
   </div>
