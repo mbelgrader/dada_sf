@@ -68,7 +68,7 @@
           <td><%= event.info %></td>
           <% if logged_in? %>
           <td><%= link_to "X", event, method: :delete,
-                                      data: { confirm: "You sure?" } %></td>
+                                      class: "delete", remote: true %></td>
           <% end %>
         </tr>
       <% end %>

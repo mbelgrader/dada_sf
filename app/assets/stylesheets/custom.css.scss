@@ -200,6 +200,12 @@ li.dropdown {
   display: inline;
 }
 
+.gallery img {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .backdrop {
   position: absolute;
   top: 0px;

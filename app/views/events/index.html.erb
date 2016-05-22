@@ -34,7 +34,7 @@
         <td id="name_listing"><%= event.name %></td>
         <% if logged_in? %>
         <td><%= link_to "X", event, method: :delete,
-                                    data: { confirm: "You sure?" } %></td>
+                                    class: "delete", remote: true %></td>
         <% end %>
       </tr>
       <!-- event details -->
