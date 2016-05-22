@@ -1,5 +1,5 @@
 class ContactsController < ApplicationController
-  before_action :logged_in_user, only: [:index, :destroy]
+  before_action :logged_in_user, only: [:index, :destroy, :edit, :update]
 
   def index
     @contacts = Contact.order(date: :desc).paginate(page: params[:page])
@@ -29,6 +29,20 @@ class ContactsController < ApplicationController
         format.json { render json: @contact.errors, status: :unprocessable_entity }
         format.js
       end
+    end
+  end
+
+  def edit
+    @contact = Contact.find(params[:id])
+  end
+
+  def update
+    @contact = Contact.find(params[:id])
+    if @contact.update_attributes(contact_params)
+      flash[:success] = "Updated"
+      redirect_to index_url
+    else
+      render 'edit'
     end
   end
 

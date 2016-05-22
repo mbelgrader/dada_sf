@@ -24,6 +24,23 @@ User.create!(name: "Mike",
                   phone: phone,
                   guests: 10,
                   date: date,
+                  time: time)
+end
+
+50.times do |n|
+  name = Faker::Name.name
+  email = Faker::Internet.safe_email
+  guests = Faker::Number.between(8, 40)
+  date = Faker::Date.forward(23)
+  phone = Faker::PhoneNumber.cell_phone
+  time = Faker::Time.backward(14, :evening)
+  size = Faker::Company.profession
+  info = Faker::Company.buzzword
+  Party.create!(name: name,
+                  email: email,
+                  phone: phone,
+                  guests: 10,
+                  date: date,
                   time: time,
                   size: size,
                   info: info)

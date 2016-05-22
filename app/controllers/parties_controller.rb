@@ -1,5 +1,5 @@
 class PartiesController < ApplicationController
-    before_action :logged_in_user, only: [:index, :destroy]
+    before_action :logged_in_user, only: [:index, :destroy, :update, :destroy]
 
     def index
       @parties = Party.order(date: :desc).paginate(page: params[:page])
@@ -32,6 +32,20 @@ class PartiesController < ApplicationController
           format.json { render json: @party.errors, status: :unprocessable_entity }
           format.js
         end
+      end
+    end
+
+    def edit
+      @party = Party.find(params[:id])
+    end
+
+    def update
+      @party = Party.find(params[:id])
+      if @party.update_attributes(contact_params)
+        flash[:success] = "Updated"
+        redirect_to index_url
+      else
+        render 'edit'
       end
     end
 

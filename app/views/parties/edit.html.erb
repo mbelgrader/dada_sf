@@ -1,0 +1,32 @@
+<% provide(:title, "Update Info | ") %>
+
+  <div class="container update update_contact">
+    <h1 class="center">Update information</h1>
+
+      <%= form_for(@party) do |f| %>
+
+        <%= f.text_field :name, placeholder: "Name*",
+                          class: 'form-control' %>
+
+        <%= f.email_field :email, placeholder: "Email*",
+                          class: 'form-control'  %>
+
+        <%= f.text_field :phone, placeholder: "Phone*",
+                          class: 'form-control' %>
+
+        <%= f.number_field :guests, placeholder: "Number of Guests*",
+                          class: 'form-control' %>
+
+        <%= f.text_field :date, placeholder: "Date ( YYYY-MM-DD )",
+                          class: 'form-control', "data-provide" => 'datepicker' %>
+
+        <%= f.time_field :time %>
+
+        <%= f.select :size, ['Select Venue Size', 'Mezzanine only', 'Full Bar'] %>
+
+        <%= f.text_field :info, placeholder: 'Please provide some information about the type of party or event.' %>
+
+          <%= f.submit "Update", class: "btn btn-primary" %>
+      <% end %>
+
+  </div>

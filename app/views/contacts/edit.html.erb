@@ -1,0 +1,32 @@
+<% provide(:title, "Update Info | ") %>
+
+  <div class="container update update_contact">
+    <h1 class="center">Update information</h1>
+
+      <%= form_for(@contact) do |f| %>
+        <!-- <p id="list_errors"></p> -->
+
+          <%= f.text_field :name, placeholder: "Name*",
+                            class: 'form-control', id: 'name' %>
+
+          <%= f.email_field :email, placeholder: "Email*",
+                            class: 'form-control', id: 'email'  %>
+
+          <%= f.text_field :phone, placeholder: "Phone*",
+                            class: 'form-control', id: 'phone' %>
+
+          <%= f.number_field :guests, placeholder: "Number of Guests*",
+                            class: 'form-control', id: 'guests' %>
+
+          <%= f.text_field :date, placeholder: "Date ( YYYY-MM-DD )*",
+                            class: 'form-control', "data-provide" => 'datepicker',
+                            id: 'date' %>
+
+          <%= f.time_field :time %>
+
+          <%= f.hidden_field :size, :value => "Table"  %>
+
+          <%= f.submit "Update", class: "btn btn-primary" %>
+      <% end %>
+
+  </div>
