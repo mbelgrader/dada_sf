@@ -6,8 +6,9 @@
     <h1 class="center">Request a table reservation</h1>
     <p class="center">Minimum guests: 8</p>
 
-      <%= form_for(Contact.new) do |f| %>
+      <%= form_for(Contact.new, remote: true) do |f| %>
         <p id="list_errors"></p>
+        <p id="thanks"></p>
 
           <%= f.text_field :name, placeholder: "Name*",
                             class: 'form-control', id: 'name' %>
@@ -37,3 +38,18 @@
 
   </div>
 </div>
+
+<script>
+  $('form').submit(function() {
+    var name = $("input#name").val();
+    var email = $("input#email").val();
+    var phone = $("input#phone").val();
+    var guests = $("input#guests").val();
+    var date = $("input#date").val();
+
+    if  (name && email && phone && date !== "") {
+      $("p#thanks").text("Thank you for your request. We will contact you with availabilty.");
+    }
+
+  })
+</script>

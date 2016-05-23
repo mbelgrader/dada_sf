@@ -23,7 +23,7 @@ class ContactsController < ApplicationController
       if @contact.save
         format.html { render action: "new" }
         format.json { render json: @contact, status: :created, location: @contact }
-        format.js   { render js: "window.location.href='"+reservations_path+"'"}
+        # format.js   { render js: "window.location.href='"+reservations_path+"'"}
       else
         format.html { render action: "new" }
         format.json { render json: @contact.errors, status: :unprocessable_entity }

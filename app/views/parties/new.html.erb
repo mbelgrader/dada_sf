@@ -6,8 +6,9 @@
     <h1 class="center">Request our Venue</h1>
     <p class="center">for a Private Party or Event</p>
 
-      <%= form_for(Party.new) do |f| %>
+      <%= form_for(Party.new, remote: true) do |f| %>
         <p id="list_errors_party"></p>
+        <p id="thanks"></p>
 
           <%= f.text_field :name, placeholder: "Name*",
                             class: 'form-control' %>
@@ -38,3 +39,18 @@
 
   </div>
 </div>
+
+<script>
+$('form').click(function() {
+  var name = $("input#name").val();
+  var email = $("input#email").val();
+  var phone = $("input#phone").val();
+  var guests = $("input#guests").val();
+  var date = $("input#date").val();
+
+  if  (name && email && phone && date !== "") {
+    $("p#thanks").text("Thank you for your request. We will contact you with availabilty.");
+  }
+
+})
+</script>
