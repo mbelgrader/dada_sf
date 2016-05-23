@@ -6,27 +6,29 @@
       <%= form_for(@contact) do |f| %>
         <!-- <p id="list_errors"></p> -->
 
-          <%= f.text_field :name, placeholder: "Name*",
-                            class: 'form-control', id: 'name' %>
+        <%= f.text_field :name, placeholder: "Name*",
+                          class: 'form-control', id: 'name' %>
 
-          <%= f.email_field :email, placeholder: "Email*",
-                            class: 'form-control', id: 'email'  %>
+        <%= f.email_field :email, placeholder: "Email*",
+                          class: 'form-control', id: 'email'  %>
 
-          <%= f.text_field :phone, placeholder: "Phone*",
-                            class: 'form-control', id: 'phone' %>
+        <%= f.text_field :phone, placeholder: "Phone*",
+                          class: 'form-control', id: 'phone' %>
 
-          <%= f.number_field :guests, placeholder: "Number of Guests*",
-                            class: 'form-control', id: 'guests' %>
+        <%= f.number_field :guests, placeholder: "Number of Guests*",
+                          class: 'form-control', id: 'guests' %>
 
-          <%= f.text_field :date, placeholder: "Date ( YYYY-MM-DD )*",
-                            class: 'form-control', "data-provide" => 'datepicker',
-                            id: 'date' %>
+        <%= f.text_field :date, placeholder: "Date ( YYYY-MM-DD )*",
+                          class: 'form-control', "data-provide" => 'datepicker',
+                          id: 'date' %>
 
-          <%= f.time_field :time %>
+        <%= f.time_field :time %>
 
-          <%= f.hidden_field :size, :value => "Table"  %>
+        <%= f.text_field :confirmed, placeholder: "Confirmed?",
+                          class: 'form-control' %>
 
-          <%= f.submit "Update", class: "btn btn-primary" %>
+
+        <%= f.submit "Update", class: "btn btn-primary" %>
       <% end %>
 
   </div>

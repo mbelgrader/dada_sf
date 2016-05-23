@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160522073950) do
+ActiveRecord::Schema.define(version: 20160522114015) do
 
   create_table "contacts", force: :cascade do |t|
     t.string   "name"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20160522073950) do
     t.datetime "updated_at", null: false
     t.string   "size"
     t.text     "info"
+    t.string   "confirmed"
   end
 
   create_table "events", force: :cascade do |t|
@@ -50,6 +51,7 @@ ActiveRecord::Schema.define(version: 20160522073950) do
     t.text     "info"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "confirmed"
   end
 
   create_table "photos", force: :cascade do |t|

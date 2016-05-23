@@ -58,7 +58,7 @@ class ContactsController < ApplicationController
   private
 
     def contact_params
-      params.require(:contact).permit(:name, :email, :phone, :guests, :date, :time, :size, :info)
+      params.require(:contact).permit(:name, :email, :phone, :guests, :date, :time, :size, :info, :confirmed)
     end
 
     # Before filters

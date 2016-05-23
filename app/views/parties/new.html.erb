@@ -6,7 +6,7 @@
     <h1 class="center">Request our Venue</h1>
     <p class="center">for a Private Party or Event</p>
 
-      <%= form_for(Party.new, remote: true) do |f| %>
+      <%= form_for(Party.new) do |f| %>
         <p id="list_errors_party"></p>
 
           <%= f.text_field :name, placeholder: "Name*",
@@ -38,18 +38,3 @@
 
   </div>
 </div>
-
-<script>
-$("div.party_request form").submit(function() {
-  var name = $("input#name").val();
-  var email = $("input#email").val();
-  var phone = $("input#phone").val();
-  var guests = $("input#guests").val();
-  var date = $("input#date").val();
-  var date = $("input#info").val();
-
-  if  (name && email && phone && date && info !== "") && (guests >= 8) {
-    $("div.party_request").html("<p>Thank you for your request. We will contact you with availabilty</p>");
-  }
-})
-</script>

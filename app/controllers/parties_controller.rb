@@ -18,7 +18,7 @@ class PartiesController < ApplicationController
     end
 
     def create
-      @party = Party.new(contact_params)
+      @party = Party.new(party_params)
       if @party.save
         UserMailer.info(@party).deliver_now
       end
@@ -41,7 +41,7 @@ class PartiesController < ApplicationController
 
     def update
       @party = Party.find(params[:id])
-      if @party.update_attributes(contact_params)
+      if @party.update_attributes(party_params)
         flash[:success] = "Updated"
         redirect_to index_url
       else
@@ -60,8 +60,8 @@ class PartiesController < ApplicationController
 
     private
 
-      def contact_params
-        params.require(:party).permit(:name, :email, :phone, :guests, :date, :time, :size, :info)
+      def party_params
+        params.require(:party).permit(:name, :email, :phone, :guests, :date, :time, :size, :info, :confirmed)
       end
 
       # Before filters

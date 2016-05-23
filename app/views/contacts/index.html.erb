@@ -13,10 +13,11 @@
     <td>Guests</td>
     <td>Date</td>
     <td>Time</td>
+    <td>Confirmed</td>
     <!-- <td>Size</td>
     <td>Info</td> -->
   </tr>
-  <% @contacts.limit(10).each do |contact| %>
+  <% @contacts.each do |contact| %>
     <tr>
       <td><%= contact.name %></td>
       <td><%= contact.email %></td>
@@ -24,8 +25,7 @@
       <td><%= contact.guests %></td>
       <td><%= contact.date %></td>
       <td><%= contact.time %></td>
-      <!-- <td><%= contact.size %></td>
-      <td><%= contact.info %></td> -->
+      <td><%= contact.confirmed %></td>
       <td><%= link_to "Edit", edit_contact_path(contact) %></td>
       <td><%= link_to "X", contact, method: :delete,
                                    class: "delete", remote: true %></td>
@@ -56,8 +56,9 @@
     <td>Time</td>
     <td>Size</td>
     <td>Info</td>
+    <td>Confirmed</td>
   </tr>
-  <% @parties.limit(10).each do |party| %>
+  <% @parties.each do |party| %>
     <tr>
       <td><%= party.name %></td>
       <td><%= party.email %></td>
@@ -67,6 +68,7 @@
       <td><%= party.time %></td>
       <td><%= party.size %></td>
       <td><%= party.info %></td>
+      <td><%= party.confirmed %></td>
       <td><%= link_to "Edit", edit_party_path(party) %></td>
       <td><%= link_to "X", party, method: :delete,
                                    class: "delete", remote: true %></td>

@@ -6,7 +6,7 @@
     <h1 class="center">Request a table reservation</h1>
     <p class="center">Minimum guests: 8</p>
 
-      <%= form_for(Contact.new, remote: true) do |f| %>
+      <%= form_for(Contact.new) do |f| %>
         <p id="list_errors"></p>
 
           <%= f.text_field :name, placeholder: "Name*",
@@ -37,18 +37,3 @@
 
   </div>
 </div>
-
-<script>
-// On contact form submission, show thank you message
-$("div.table_request form").submit(function() {
-  var name = $("input#name").val();
-  var email = $("input#email").val();
-  var phone = $("input#phone").val();
-  var guests = $("input#guests").val();
-  var date = $("input#date").val();
-
-  if  (name && email && phone && date !== "") && (guests >= 8) {
-    $("div.table_request").html("<p>Thank you for your request. We will contact you with availabilty</p>");
-  }
-})
-</script>
