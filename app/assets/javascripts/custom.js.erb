@@ -6,11 +6,11 @@ $(document).ready(function(){
   })
 
   // Color nav links red on hover
-  $("li a").mouseover(function() {
-    $(this).css('color', 'red');
+  $("nav#desktop_nav li a").mouseover(function() {
+    $(this).css('color', 'red').css('font-weight', 'bold');
   })
 
-  $("li a").mouseout(function() {
+  $("nav#desktop_nav li a").mouseout(function() {
     $(this).css('color', '#d8d8d8');
   })
 

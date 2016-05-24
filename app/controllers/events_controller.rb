@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :logged_in_user, only: [:destroy]
+  before_action :logged_in_user, only: [:destroy, :update, :edit]
 
   def index
     @events = Event.order(date: :desc).paginate(page: params[:page])
@@ -20,6 +20,20 @@ class EventsController < ApplicationController
       redirect_to events_url
     else
       redirect_to events_url
+    end
+  end
+
+  def edit
+    @event = Event.find(params[:id])
+  end
+
+  def update
+    @event = Event.find(params[:id])
+    if @event.update_attributes(event_params)
+      flash[:success] = "Updated"
+      redirect_to events_url
+    else
+      render 'edit'
     end
   end
 

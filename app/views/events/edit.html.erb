@@ -1,0 +1,18 @@
+<% provide(:title, "Update | ") %>
+
+<div class="container" style="width:350px;padding-bottom:20px">
+    <%= form_for @event, html: { multipart: true } do |f| %>
+
+        <%= f.text_field :name, placeholder: "Name*",
+                          class: 'form-control' %>
+
+        <%= f.text_field :date, placeholder: "Date ( YYYY-MM-DD )",
+                          class: 'form-control', "data-provide" => 'datepicker' %>
+
+        <%= f.text_field :info, placeholder: 'Additional Information' %>
+
+        <%= f.file_field :flyer%>
+
+        <%= f.submit "Update", class: "btn btn-primary" %>
+    <% end %>
+</div>

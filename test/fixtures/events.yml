@@ -1,13 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+event:
   name: MyString
   date: 2016-05-08
   time: 2016-05-08 03:01:32
   info: MyText
 
-two:
-  name: MyString
-  date: 2016-05-08
-  time: 2016-05-08 03:01:32
-  info: MyText
+<% 40.times do |n| %>
+event_<%= n %>:
+  name:  <%= "Event #{n}" %>
+<% end %>

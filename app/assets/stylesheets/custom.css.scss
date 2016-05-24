@@ -137,7 +137,7 @@ li.dropdown {
 
 #mobile_nav ul {
     list-style: none;
-    background: #1c1c1c;
+    background: red;
     padding: 5px 0;
 }
 
@@ -157,7 +157,7 @@ li.dropdown {
 #mobile_nav li a:hover,
 #mobile_nav li a:focus {
     background: none;
-    color: red;
+    color: black;
 }
 
 /* desktop nav */
@@ -220,10 +220,9 @@ li.dropdown {
 }
 
 .box {
-  position: fixed; /* keeps the lightbox window in the current viewport */
+  position: fixed;
   top: 50%;
   left: 50%;
-  /* bring your own prefixes */
   transform: translate(-50%, -50%);
   overflow: hidden;
   height: 80%;
@@ -242,10 +241,9 @@ li.dropdown {
 }
 
 .box img {
-  position: fixed; /* keeps the lightbox window in the current viewport */
+  position: fixed;
   top: 50%;
   left: 50%;
-  /* bring your own prefixes */
   transform: translate(-50%, -50%);
   width: auto;
   height: 100%;
@@ -260,6 +258,9 @@ li.dropdown {
   transform: translate(-50%, -50%);
   font-size: 3em;
   z-index: 4;
+    &:hover {
+      cursor: pointer;
+    }
 }
 
 #right_arrow {
@@ -271,6 +272,9 @@ li.dropdown {
   transform: translate(-50%, -50%);
   font-size: 3em;
   z-index: 50;
+    &:hover {
+      cursor: pointer;
+    }
 }
 
 #close_lightbox {
@@ -292,11 +296,12 @@ li.dropdown {
 .events {
   text-transform: none;
   text-align: center;
+  margin-top: 20px;
 }
 
 #events_container {
-  text-align: center;
   padding-bottom: 20px;
+  text-align: center;
 }
 
 #events_banner {
@@ -555,6 +560,15 @@ td {
       width: 500px;
     }
 
+    #events_container {
+      position: relative;
+      margin: auto;
+      top: 20;
+      right: 0;
+      left: 0;
+      width: 700px;
+    }
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -572,20 +586,12 @@ td {
   }
 
   span.glyphicon {
-      font-size: 2em;
-  }
-
-  .slide {
-    max-height: 200px;
-    width: 100%;
-  }
-  .carousel{
-    height: 200px;
+    font-size: 2em;
   }
 
   section .row img {
-  margin: 0 0 20px;
-  width: 100%;
+    margin: 0 0 20px;
+    width: 100%;
   }
 
   header {
@@ -607,6 +613,7 @@ td {
     background-size: 100% 100%;
   }
 
+  /* gallery */
   #left_arrow {
     font-size: 1em;
   }
@@ -620,5 +627,13 @@ td {
     height: auto;
   }
 
+ /* events */
+  #events_banner {
+    background-size: 100%;
+  }
+
+  #date_red {
+    font-size: 1.5em;
+  }
 
 }

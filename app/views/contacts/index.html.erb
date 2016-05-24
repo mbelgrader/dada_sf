@@ -22,10 +22,10 @@
       <td><%= contact.name %></td>
       <td><%= contact.email %></td>
       <td><%= contact.phone %></td>
-      <td><%= contact.guests %></td>
+      <td style="text-align:center"><%= contact.guests %></td>
       <td><%= contact.date %></td>
       <td><%= contact.time %></td>
-      <td><%= contact.confirmed %></td>
+      <td style="text-align:center"><%= contact.confirmed %></td>
       <td><%= link_to "Edit", edit_contact_path(contact) %></td>
       <td><%= link_to "X", contact, method: :delete,
                                    class: "delete", remote: true %></td>
