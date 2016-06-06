@@ -23,7 +23,8 @@
                             class: 'form-control' %>
 
           <%= f.text_field :date, placeholder: "Date ( YYYY-MM-DD )",
-                            class: 'form-control', "data-provide" => 'datepicker' %>
+                            class: 'form-control', "data-provide" => 'datepicker',
+                            id: 'date' %>
 
           <%= f.time_field :time %>
 
@@ -41,16 +42,17 @@
 </div>
 
 <script>
-$('form').click(function() {
-  var name = $("input#name").val();
-  var email = $("input#email").val();
-  var phone = $("input#phone").val();
-  var guests = $("input#guests").val();
-  var date = $("input#date").val();
+  $('form').submit(function() {
+    $("p#list_errors_party").empty();
+    var name = $("input#name").val();
+    var email = $("input#email").val();
+    var phone = $("input#phone").val();
+    var guests = $("input#guests").val();
+    var date = $("input#date").val();
 
-  if  (name && email && phone && date !== "") {
-    $("p#thanks").text("Thank you for your request. We will contact you with availabilty.");
-  }
+    if  (name && email !== "") {
+      $("p#thanks").text("Thank you for your request. We will contact you with availabilty.");
+    }
 
-})
+  })
 </script>

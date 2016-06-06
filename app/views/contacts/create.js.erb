@@ -1,5 +1,6 @@
 <% if @contact.errors.any? %>
-  $("#list_errors").after("<%= j render('shared/error_messages') %>");
+  $("#list_errors").empty();
+  $("#list_errors").append("<%= j render('shared/error_messages') %>");
 <% else %>
   $(".request_form").empty().append("<p>Thank you for your request! We will be in touch.</p>");
   $(".request_form").css({"text-align": "center", "color": "red"});

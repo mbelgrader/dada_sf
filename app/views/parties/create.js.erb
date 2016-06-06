@@ -1,6 +1,7 @@
 <% if @party.errors.any? %>
-  $("#list_errors_party").after("<%= j render('shared/error_messages_party') %>");
+  $("#list_errors_party").empty();
+  $("#list_errors_party").append("<%= j render('shared/error_messages_party') %>");
 <% else %>
-  $(".request_for").empty().append("<p>Thank you for your request! We will be in touch.</p>");
+  $(".request_form").empty().append("<p>Thank you for your request! We will be in touch.</p>");
   $(".request_form").css({"text-align": "center", "color": "red"});
 <% end %>
