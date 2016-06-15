@@ -1,4 +1,16 @@
 $(document).ready(function(){
+
+  $('form').submit(function() {
+    var name = $("input#name").val();
+    var email = $("input#email").val();
+    var guests = $("input#guests").val();
+
+    if  (name !== "" && email !== "" && guests >= 8) {
+      $("p#list_errors").empty();
+      $("p#thanks").text("Thank you for your request. We will contact you with availabilty.");
+    };
+  });
+
   // datepicker
   $(function() {
     $( "#datepicker" ).datepicker({ dateFormat: 'dd/mm/yy'});

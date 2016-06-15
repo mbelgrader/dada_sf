@@ -10,6 +10,7 @@ class LayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", 'location'
     assert_select "a[href=?]", 'gallery'
     assert_select "a[href=?]", 'reservations'
+    assert_select "a[href=?]", 'events'
   end
 
 end

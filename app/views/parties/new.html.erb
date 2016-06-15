@@ -7,20 +7,20 @@
     <p class="center">for a Private Party or Event</p>
 
       <%= form_for(Party.new, remote: true) do |f| %>
-        <p id="list_errors_party"></p>
+        <p id="list_errors"></p>
         <p id="thanks"></p>
 
           <%= f.text_field :name, placeholder: "Name*",
-                            class: 'form-control' %>
+                            class: 'form-control', id: 'name' %>
 
           <%= f.email_field :email, placeholder: "Email*",
-                            class: 'form-control'  %>
+                            class: 'form-control', id: 'email'  %>
 
           <%= f.text_field :phone, placeholder: "Phone*",
                             class: 'form-control' %>
 
           <%= f.number_field :guests, placeholder: "Number of Guests*",
-                            class: 'form-control' %>
+                            class: 'form-control', id: 'guests' %>
 
           <%= f.text_field :date, placeholder: "Date*",
                             class: 'form-control',
@@ -40,19 +40,3 @@
 
   </div>
 </div>
-
-<script>
-  $('form').submit(function() {
-    $("p#list_errors_party").empty();
-    var name = $("input#name").val();
-    var email = $("input#email").val();
-    var phone = $("input#phone").val();
-    var guests = $("input#guests").val();
-    var date = $("input#date").val();
-
-    if  (name && email !== "") {
-      $("p#thanks").text("Thank you for your request. We will contact you with availabilty.");
-    }
-
-  })
-</script>
