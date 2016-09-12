@@ -1,7 +1,17 @@
+
+
+<div class="logo">
+  <%= link_to root_path do %>
+    <%= image_tag src="dada_logo3", height: "70px" %>
+  <% end %>
+</div>
+
+
 <header style="border-bottom:2px solid red">
+  <!--
     <%= link_to root_path do %>
       <h1 class="logo" style="font-size:20px">DADA</h1>
-    <% end %>
+    <% end %> -->
 
     <!-- Desktop navigation -->
     <nav id="desktop_nav">
@@ -27,7 +37,6 @@
       <% end %>
         <!-- Site Links -->
         <li><%= link_to "About",        'about' %></li>
-        <li><%= link_to "Location",     'location', data: { no_turbolink: true } %></li>
         <li><%= link_to "Gallery",      'gallery' %></li>
         <li><%= link_to "Events",      'events' %></li>
         <!-- Reservation Dropdown -->
@@ -57,7 +66,6 @@
           <li><%= link_to "Home",        root_path %></li>
           <li class="divider"></li>
           <li><%= link_to "About",        'about' %></li>
-          <li><%= link_to "Location",     'location', data: { no_turbolink: true } %></li>
           <li><%= link_to "Gallery",      'gallery' %></li>
           <li><%= link_to "Events",      'events' %></li>
           <li class="divider"></li>

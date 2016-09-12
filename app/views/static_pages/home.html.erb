@@ -1,4 +1,3 @@
-
   <div id="myCarousel" class="carousel slide" data-ride="carousel"
     style="border-bottom:2px solid red">
     <!-- Indicators -->
@@ -12,12 +11,16 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
 
-      <div class="item active">
+      <!-- <div class="item active">
         <%= image_tag src="slider1crop.jpg", alt:"bar"%>
       </div>
 
       <div class="item">
         <%= image_tag src="slider2crop.jpg", alt:"bar" %>
+      </div> -->
+
+      <div class="item active">
+        <%= image_tag src="better_liquor3-1.jpg", width: "100%", alt:"liquor" %>
       </div>
 
       <div class="item">
@@ -28,9 +31,17 @@
         <%= image_tag src="martini.png", alt:"martini" %>
       </div>
 
+      <!-- <div class="item">
+        <%= image_tag src="car_art_tint.png", height: "200px", alt:"car artwork" %>
+      </div> -->
+
       <div class="item">
-        <%= image_tag src="car_art.png", alt:"car artwork" %>
+        <%= image_tag src="lamp_red.jpg", width: "100%", alt:"lamp" %>
       </div>
+
+      <!-- <div class="item">
+        <%= image_tag src="better_liquor4_slider.jpg", width: "100%", alt:"liquor" %>
+      </div> -->
 
     </div>
 
@@ -65,3 +76,11 @@
     </table>
     <p style="padding-bottom:10px"><%= link_to "View All", 'events' %></p>
   </div>
+
+
+  <!-- location map -->
+
+
+      <div id="map-container">
+        <div id="map-canvas"></div>
+      </div>

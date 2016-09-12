@@ -4,20 +4,8 @@
 /*layout*/
 
 body {
-    // font: 16px/1.4em 'Optima','PT Sans', sans-serif;;
     color: white;
     background-color: #181818;
-  /*  background-color: black; */
-}
-
-p,
-ul {
-    margin: 0 0 1.5em;
-}
-
-ul {
-    list-style: disc;
-    padding: 0 0 0 20px;
 }
 
 h1 {
@@ -29,11 +17,11 @@ h1 {
 }
 
 h2 {
-    // font-family: 'PT Serif', serif;
-    font-size: 1.2rem;
-    line-height: 1.4em;
-    margin: 0 0 .4em;
-    font-weight: bold;
+  // font-family: 'PT Serif', serif;
+  font-size: 1.2rem;
+  line-height: 1.4em;
+  margin: 0 0 .4em;
+  font-weight: bold;
 }
 
 div {
@@ -44,25 +32,12 @@ div {
 /*header*/
 
 header {
-    background: #1c1c1c;
-    padding: 15px 20px;
+  // font: 16px/1.4em 'Optima','PT Sans', sans-serif;
+  font-family: 'PT Serif', serif;
+  background: #1c1c1c;
+  padding: 15px 20px;
+  height: 70px;
 }
-
-        /*shorter clearfix http://nicolasgallagher.com/micro-clearfix-hack/*/
-        header:before,
-        header:after {
-            content:"";
-            display:table;
-        }
-
-        header:after {
-            clear:both;
-        }
-
-        /* For IE 6/7 (trigger hasLayout) */
-        header {
-            zoom:1;
-        }
 
 
  .content {
@@ -114,7 +89,14 @@ p a {
   }
 }
 
-/*navigation*/
+/* logo */
+.logo {
+  z-index: 100;
+  position: absolute;
+}
+
+
+/* navigation */
 h1.logo {
     color: #d8d8d8;
     font-family: 'PT Serif', serif;
@@ -165,12 +147,13 @@ li.dropdown {
 #desktop_nav ul {
     list-style: none;
     background: #1c1c1c;
-    padding: 10px 0;
+    padding-top: 25px;
+    // padding: 10px 0;
 }
 
 #desktop_nav li a {
     display: block;
-    padding: 0 20px;
+    // padding: 0 20px;
 /*    color: #fff; */
     color: #d8d8d8;
     text-decoration: none;
@@ -185,7 +168,7 @@ li.dropdown {
 
 .jumbotron {
   background-repeat: no-repeat;
-  max-height: 200px;
+  // max-height: 200px;
 }
 
 #gallery_banner {
@@ -303,7 +286,9 @@ li.dropdown {
 }
 
 #events_banner {
-    background: image-url("nick_flatt_cig.jpg");
+    background: image-url("gallery_red3-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #date_red {
@@ -416,7 +401,7 @@ td {
   }
 
   #reserve_background {
-    background: image-url("liquor_blue.jpg");
+    background: image-url("better_liquor3.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 800px;
@@ -424,23 +409,6 @@ td {
     // margin: auto;
     // padding-left: 25px;
     // padding-right: 25px;
-  }
-
-  #section {
-    background: image-url("section2.jpg");
-    background-repeat: no-repeat;
-    width: 100%;
-    min-height: 400px;
-    background-size: 100% 100%;
-
-  }
-
-  #full_bar {
-    background: image-url("book_bar2.jpg");
-    background-repeat: no-repeat;
-    width: 100%;
-    min-height: 400px;
-    background-size: 100% 100%;
   }
 
   #reserve_dropdown {
@@ -463,16 +431,15 @@ td {
 
  #map-container {
     height: 400px;
-    border-radius: 4px 4px;
+    // border-radius: 4px 4px;
     border-color: #fff;
     border-style: solid;
-    box-shadow: 2px 2px 10px #B1B1B1;
+    // box-shadow: 2px 2px 10px #B1B1B1;
     border-width: 0px;
   }
 
   #map-canvas {
-    height: 384px;
-    width: 100%;
+    height: 100%;
   }
 
 /* login */
@@ -534,22 +501,6 @@ td {
       width: 95%;
     }
 
-    #section_container {
-      padding-top:34px;
-    }
-
-    #full_bar_container {
-      padding-top:120px;
-    }
-
-    #location {
-      background: image-url("dada_sign2.jpg");
-      background-repeat: no-repeat;
-      min-height: 400px;
-      width: 100%;
-      background-size: 100% 100%;
-    }
-
     .update {
       width: 500px;
     }
@@ -590,22 +541,6 @@ td {
 
   header {
     background: #1c1c1c;
-  }
-
-  #section_container {
-    padding-top:10px;
-  }
-
-  #full_bar_container {
-    padding-top:10px;
-  }
-
-  #location {
-    background: image-url("sign_mobile.jpg");
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 500px;
-    background-size: 100% 100%;
   }
 
   /* gallery */
