@@ -3,6 +3,7 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.order(date: :desc).paginate(page: params[:page])
+    @photos = Photo.all
   end
 
   def show

@@ -25,36 +25,49 @@
   </div>
 <!-- <% end %> -->
 
-<!-- events list -->
-<div id="events_container">
-  <%= will_paginate %>
-  <table>
-    <% @events.each do |event| %>
-      <!-- Date and headline -->
-      <tr class="events">
-        <td id="date_red"><%= event.date %></td>
-        <td id="name_listing"><%= event.name %></td>
-        <% if logged_in? %>
-        <td><%= link_to "Edit", edit_event_path(event) %></td>
-        <td><%= link_to "X", event, method: :delete,
-                                    class: "delete", remote: true %></td>
+<div class="row">
+
+  <!-- events list -->
+  <div class="col-xs-6">
+    <%= will_paginate %>
+    <table>
+      <% @events.each do |event| %>
+        <!-- Date and headline -->
+        <tr class="events">
+          <td id="date_red"><%= event.date %></td>
+          <td id="name_listing"><%= event.name %></td>
+          <% if logged_in? %>
+          <td><%= link_to "Edit", edit_event_path(event) %></td>
+          <td><%= link_to "X", event, method: :delete,
+                                      class: "delete", remote: true %></td>
+          <% end %>
+        </tr>
+        <!-- event details -->
+        <tr>
+          <td><br></td>
+          <td><%= event.info %></td>
+        </tr>
+        <!-- flyer -->
+        <tr>
+          <td><br></td>
+          <% if event.flyer.file? %>
+            <td><%= image_tag event.flyer.url(:large) %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </table>
+    <%= will_paginate %>
+  </div>
+
+  <!-- images list-->
+  <div class="col-xs-6" style="text-align:center">
+    <div>
+        <% @photos.each do |photo| %>
+          <li class="gallery"><%= image_tag photo.image.url(:medium) %></li>
         <% end %>
-      </tr>
-      <!-- event details -->
-      <tr>
-        <td><br></td>
-        <td><%= event.info %></td>
-      </tr>
-      <!-- flyer -->
-      <tr>
-        <td><br></td>
-        <% if event.flyer.file? %>
-          <td><%= image_tag event.flyer.url(:large) %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </table>
-  <%= will_paginate %>
+    </div>
+  </div>
+
 </div>
 
 <script>
