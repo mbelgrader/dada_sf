@@ -1,0 +1,30 @@
+<%= will_paginate %>
+
+<table>
+  <% @events.each do |event| %>
+    <!-- Date and headline -->
+    <tr class="events">
+      <td id="date_red"><%= event.date %></td>
+      <td id="name_listing"><%= event.name %></td>
+      <% if logged_in? %>
+      <td><%= link_to "Edit", edit_event_path(event) %></td>
+      <td><%= link_to "X", event, method: :delete,
+                                  class: "delete", remote: true %></td>
+      <% end %>
+    </tr>
+    <!-- event details -->
+    <tr>
+      <td><br></td>
+      <td><%= event.info %></td>
+    </tr>
+    <!-- flyer -->
+    <tr>
+      <td><br></td>
+      <% if event.flyer.file? %>
+        <td><%= image_tag event.flyer.url(:large) %></td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
+
+<%= will_paginate %>

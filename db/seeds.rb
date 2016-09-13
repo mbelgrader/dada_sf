@@ -46,7 +46,7 @@ end
                   info: info)
 end
 
-2.times do |n|
+10.times do |n|
   name = Faker::Name.name
   date = Faker::Date.forward(23)
   time = Faker::Time.backward(14, :evening)
@@ -56,7 +56,7 @@ end
                   info: "Come join us for Kareoke Thursdays!")
 end
 
-2.times do |n|
+10.times do |n|
   name = Faker::Name.name
   date = Faker::Date.forward(23)
   time = Faker::Time.backward(14, :evening)
@@ -66,7 +66,7 @@ end
                   info: "Live Event: Bay Area metal band performing their hits")
 end
 
-2.times do |n|
+10.times do |n|
   name = Faker::Name.name
   date = Faker::Date.forward(23)
   time = Faker::Time.backward(14, :evening)
@@ -76,7 +76,7 @@ end
                   info: "Get ready to jam out to classic 90s all day")
 end
 
-2.times do |n|
+10.times do |n|
   name = Faker::Name.name
   date = Faker::Date.forward(23)
   time = Faker::Time.backward(14, :evening)

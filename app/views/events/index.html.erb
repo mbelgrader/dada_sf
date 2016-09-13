@@ -8,66 +8,43 @@
 <!-- add event form -->
 <!-- <% if logged_in? %> -->
   <div class="container" style="width:350px;padding-bottom:20px">
-      <%= form_for Event.new, url: events_path, html: { multipart: true } do |f| %>
+    <%= form_for Event.new, url: events_path, html: { multipart: true } do |f| %>
 
-          <%= f.text_field :name, placeholder: "Name*",
-                            class: 'form-control' %>
+        <%= f.text_field :name, placeholder: "Name*",
+                          class: 'form-control' %>
 
-          <%= f.text_field :date, placeholder: "Date ( YYYY-MM-DD )",
-                            class: 'form-control', "data-provide" => 'datepicker' %>
+        <%= f.text_field :date, placeholder: "Date ( YYYY-MM-DD )",
+                          class: 'form-control', "data-provide" => 'datepicker' %>
 
-          <%= f.text_field :info, placeholder: 'Additional Information' %>
+        <%= f.text_field :info, placeholder: 'Additional Information' %>
 
-          <%= f.file_field :flyer%>
+        <%= f.file_field :flyer%>
 
-          <%= f.submit "Add Event", class: "btn btn-primary" %>
-      <% end %>
+        <%= f.submit "Add Event", class: "btn btn-primary" %>
+    <% end %>
   </div>
 <!-- <% end %> -->
 
-<div class="row">
+<div class="row desktop">
 
   <!-- events list -->
   <div class="col-xs-6">
-    <%= will_paginate %>
-    <table>
-      <% @events.each do |event| %>
-        <!-- Date and headline -->
-        <tr class="events">
-          <td id="date_red"><%= event.date %></td>
-          <td id="name_listing"><%= event.name %></td>
-          <% if logged_in? %>
-          <td><%= link_to "Edit", edit_event_path(event) %></td>
-          <td><%= link_to "X", event, method: :delete,
-                                      class: "delete", remote: true %></td>
-          <% end %>
-        </tr>
-        <!-- event details -->
-        <tr>
-          <td><br></td>
-          <td><%= event.info %></td>
-        </tr>
-        <!-- flyer -->
-        <tr>
-          <td><br></td>
-          <% if event.flyer.file? %>
-            <td><%= image_tag event.flyer.url(:large) %></td>
-          <% end %>
-        </tr>
-      <% end %>
-    </table>
-    <%= will_paginate %>
+    <%= render 'layouts/events_table' %>
   </div>
 
   <!-- images list-->
   <div class="col-xs-6" style="text-align:center">
     <div>
-        <% @photos.each do |photo| %>
+        <% @photos.limit(30).each do |photo| %>
           <li class="gallery"><%= image_tag photo.image.url(:medium) %></li>
         <% end %>
     </div>
   </div>
 
+</div>
+
+<div class="mobile">
+  <%= render 'layouts/events_table' %>
 </div>
 
 <script>
