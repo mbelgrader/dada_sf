@@ -300,12 +300,7 @@ li.dropdown {
   text-transform: uppercase;
 }
 
-#date_home {
-  background-color: red;
-  text-transform: uppercase;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
+
 
 #view_all {
   padding-bottom: 10px;
@@ -533,6 +528,13 @@ th.datepicker-switch, .next, .prev {
     width: 700px;
   }
 
+  #date_home {
+    background-color: red;
+    text-transform: uppercase;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -580,6 +582,14 @@ th.datepicker-switch, .next, .prev {
 
   #date_red {
     font-size: 1.5em;
+  }
+
+  #date_home {
+    // background-color: red;
+    color: red;
+    text-transform: uppercase;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 
 }
