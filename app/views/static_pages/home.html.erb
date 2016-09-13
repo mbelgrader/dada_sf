@@ -57,10 +57,10 @@
   </div>
 
 
-  <div class="container events" style="padding-left:75px">
+  <div class="container events">
     <h1 class="events">Upcoming Events</h1>
 
-    <table class="home_events">
+    <table class="home_events container-fluid">
       <% @events.limit(5).each do |event| %>
         <tr>
           <td id="date_home"><%= event.date %></td>
