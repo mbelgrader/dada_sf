@@ -308,7 +308,16 @@ li.dropdown {
 
 #date_home {
   background-color: red;
+  // padding-left: 75px;
+  // color: red;
   text-transform: uppercase;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#view_all {
+  padding-bottom: 10px;
+  font-family: ubuntu;
 }
 
 #name_listing {
@@ -329,6 +338,7 @@ td {
   color: red;
   font-family: ubuntu;
 }
+
 
  /* reservations */
 
