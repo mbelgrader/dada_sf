@@ -3,7 +3,7 @@
 <div id="reserve_background">
 
   <div class="container form_box party_request">
-    <h1 class="center">Request our Venue</h1>
+    <h1 class="center">Private Party Request</h1>
     <p class="center">Private Party / Event information:</p>
 
       <%= form_for(Party.new, remote: true) do |f| %>
@@ -28,7 +28,7 @@
 
           <%= f.time_field :time %>
 
-          <%= f.select :size, ['Select Venue Size', 'Mezzanine only', 'Complete Venue'] %>
+          <%= f.select :size, ['Select Venue Size', 'Mezzanine only', 'Entire Venue'] %>
 
           <%= f.text_field :info, placeholder: 'Please provide some information about the type of party or event.' %>
 
