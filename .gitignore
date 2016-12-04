@@ -20,7 +20,7 @@
 /spring/*.pid
 
 
-
+/db/seeds.rb
 
 *.rbc
 capybara-*.html
