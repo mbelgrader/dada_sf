@@ -14,7 +14,7 @@ class UserMailer < ApplicationMailer
   def info(contact)
     @contact = contact
 
-    mail to: "mbelgrader5@gmail.com", subject: "Reservation Request"
+    mail to: "dadabarsf@gmail.com", subject: "Reservation Request"
   end
-    
+
 end
