@@ -1,8 +1,8 @@
 <% provide(:title, "Events | ") %>
 
 <!-- banner -->
-<div class="jumbotron" id="events_banner">
-  <h1 style="text-align:center">Events</h1>
+<div class="red-border banner">
+  <h1 class="center banner-heading">Events</h1>
 </div>
 
 <!-- add event form -->
@@ -33,7 +33,7 @@
   </div>
 
   <!-- images list-->
-  <div class="col-xs-6" style="text-align:center">
+  <div class="col-xs-6" class="center" style="padding-top: 40px">
     <div>
         <% @photos.limit(30).each do |photo| %>
           <li class="gallery"><%= image_tag photo.image.url(:medium) %></li>

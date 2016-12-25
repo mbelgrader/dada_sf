@@ -1,6 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$light-grey: #DED8D6;
+$medium-red: #D82415;
 /*layout*/
 
 body {
@@ -28,6 +30,10 @@ div {
   display: block;
 }
 
+.banner {
+  height: 80px;
+  background-color: $medium-red;
+}
 
 /*header*/
 
@@ -164,17 +170,24 @@ li.dropdown {
     height: 2em;
 }
 
-/* gallery */
+/* g */
 
 .jumbotron {
   background-repeat: no-repeat;
 }
 
-#gallery_banner {
-  background: image-url("gallery_red3-1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-bottom: 2px solid red;
+// #gallery_banner {
+//   // background: image-url("gallery_red3-1.jpg");
+//   // background-repeat: no-repeat;
+//   // background-size: cover;
+//   height: 80px;
+//   background-color: $medium-red;
+// }
+
+.banner-heading {
+  margin-top: 0;
+  padding-top: 20px;
+  font-size: 40px;
 }
 
 .gallery {
@@ -282,12 +295,11 @@ li.dropdown {
   margin-top: 20px;
 }
 
-#events_banner {
-  background: image-url("gallery_red3-1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-bottom: 2px solid red;
-}
+// #events_banner {
+//   // background: image-url("gallery_red3-1.jpg");
+//   // background-repeat: no-repeat;
+//   // background-size: cover;
+// }
 
 #date_red {
   background-color: red;
@@ -313,7 +325,7 @@ tr.events {
 }
 
 td {
-  padding:0 25px 25px 25px;
+  padding:15px 15px 15px 15px;
   text-align: center;
 }
 
