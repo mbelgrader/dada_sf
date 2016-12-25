@@ -1,12 +1,12 @@
 
 <div class="container">
 <br>
-<h1 style="text-align:center">Table Requests</h1>
+<h1 class="center">Table Requests</h1>
 
 <%= will_paginate %>
 
 <table class="contacts table" %>
-  <tr style="font-weight:bold">
+  <tr class="table-headers">
     <td>Name</td>
     <td>Email</td>
     <td>Phone</td>
@@ -14,18 +14,16 @@
     <td>Date</td>
     <td>Time</td>
     <td>Confirmed</td>
-    <!-- <td>Size</td>
-    <td>Info</td> -->
   </tr>
   <% @contacts.each do |contact| %>
     <tr>
       <td><%= contact.name %></td>
       <td><%= contact.email %></td>
       <td><%= contact.phone %></td>
-      <td style="text-align:center"><%= contact.guests %></td>
+      <td class="center"><%= contact.guests %></td>
       <td><%= contact.date %></td>
       <td><%= contact.time %></td>
-      <td style="text-align:center"><%= contact.confirmed %></td>
+      <td class="center"><%= contact.confirmed %></td>
       <td><%= link_to "Edit", edit_contact_path(contact) %></td>
       <td><%= link_to "X", contact, method: :delete,
                                    class: "delete", remote: true %></td>
@@ -42,21 +40,21 @@
 
 <div class="container">
 <br>
-<h1 style="text-align:center">Private Party Requests</h1>
+<h1 class="center">Private Party Requests</h1>
 
 <%= will_paginate %>
 
 <table class="contacts table" %>
-  <tr style="font-weight:bold">
-    <td>Name</td>
-    <td>Email</td>
-    <td>Phone</td>
-    <td>Guests</td>
-    <td>Date</td>
-    <td>Time</td>
-    <td>Size</td>
-    <td>Info</td>
-    <td>Confirmed</td>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Guests</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Size</th>
+    <th>Info</th>
+    <th>Confirmed</th>
   </tr>
   <% @parties.each do |party| %>
     <tr>

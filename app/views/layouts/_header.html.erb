@@ -1,5 +1,3 @@
-
-
 <div class="logo">
   <%= link_to root_path do %>
     <%= image_tag src="dada_logo3.jpg", height: "70px" %>
@@ -7,11 +5,7 @@
 </div>
 
 
-<header style="border-bottom:2px solid red">
-  <!--
-    <%= link_to root_path do %>
-      <h1 class="logo" style="font-size:20px">DADA</h1>
-    <% end %> -->
+<header class="red-border">
 
     <!-- Desktop navigation -->
     <nav id="desktop_nav">
@@ -35,7 +29,7 @@
           </ul>
         </li>
       <% end %>
-        <!-- Site Links -->
+
         <li><%= link_to "About",        'about' %></li>
         <li><%= link_to "Gallery",      'gallery' %></li>
         <li><%= link_to "Events",      'events' %></li>
@@ -43,14 +37,12 @@
         <li class="dropdown" id="reserve_dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             Reservations
-            <!-- <b class="caret"></b> -->
           </a>
           <ul class="dropdown-menu" id="reserve_list">
             <li class="reserve_drop"><%= link_to "Tables", 'reservations' %></li>
             <li class="reserve_drop"><%= link_to "Private Party", 'parties' %></li>
           </ul>
         </li>
-        <!-- End of dropdown -->
       </ul>
     </nav>
 
@@ -62,7 +54,7 @@
           <%= image_tag src="menu.png", height: "20px", color: "white", id: "menu" %>
         </a>
 
-        <ul class="dropdown-menu dropdown-menu-right" style="list-style:none">
+        <ul class="dropdown-menu dropdown-menu-right">
           <li><%= link_to "Home",        root_path %></li>
           <li class="divider"></li>
           <li><%= link_to "About",        'about' %></li>

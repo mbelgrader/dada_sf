@@ -18,7 +18,6 @@ h1 {
 }
 
 h2 {
-  // font-family: 'PT Serif', serif;
   font-size: 1.2rem;
   line-height: 1.4em;
   margin: 0 0 .4em;
@@ -33,7 +32,6 @@ div {
 /*header*/
 
 header {
-  // font: 16px/1.4em 'Optima','PT Sans', sans-serif;
   font-family: 'PT Serif', serif;
   background: #1c1c1c;
   padding: 15px 20px;
@@ -48,6 +46,10 @@ header {
 
  .center {
    text-align: center;
+ }
+
+ .red-border {
+   border-bottom: 2px solid red;
  }
 
 /* footer */
@@ -68,8 +70,6 @@ footer p {
 
 div.social_media a img {
   height: 40px;
-  // padding-left: 5px;
-  // padding-right: 5px;
 }
 
 div.social_media {
@@ -151,13 +151,10 @@ li.dropdown {
     list-style: none;
     background: #1c1c1c;
     padding-top: 25px;
-    // padding: 10px 0;
 }
 
 #desktop_nav li a {
     display: block;
-    // padding: 0 20px;
-/*    color: #fff; */
     color: #d8d8d8;
     text-decoration: none;
     text-transform: uppercase;
@@ -171,7 +168,6 @@ li.dropdown {
 
 .jumbotron {
   background-repeat: no-repeat;
-  // max-height: 200px;
 }
 
 #gallery_banner {
@@ -349,7 +345,6 @@ input, textarea, select, .uneditable-input {
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
   box-sizing:         border-box;
-  // -webkit-text-fill-color: yellow !important;
   -webkit-box-shadow: 0 0 0px 1000px #181818 inset;
 }
 
@@ -369,9 +364,6 @@ input[type='password'] {
   border: 1px solid #2d2d2d;
   outline: none;
   color: white;
-  // &:focus {
-  //   -webkit-transition: all 0.2s ease-in-out 0s;
-  // }
 }
 
 select {
@@ -403,7 +395,6 @@ input:focus:-webkit-autofill {
 }
 
 .btn-primary {
-  // border-radius: .1;
   border: 1px solid red;
   &:hover {
     -webkit-box-shadow: 0 0 0px 1000px red inset;
@@ -416,13 +407,14 @@ input:focus:-webkit-autofill {
   background-size: 100% 100%;
   height: 800px;
   min-height: 300px;
-  // margin: auto;
-  // padding-left: 25px;
-  // padding-right: 25px;
 }
 
 #reserve_dropdown {
   float: right;
+}
+
+.table-headers {
+  font-weight: bold;
 }
 
 /* datepicker */
@@ -441,10 +433,8 @@ th.datepicker-switch, .next, .prev {
 
 #map-container {
   height: 400px;
-  // border-radius: 4px 4px;
   border-color: #fff;
   border-style: solid;
-  // box-shadow: 2px 2px 10px #B1B1B1;
   border-width: 0px;
 }
 
@@ -462,10 +452,6 @@ th.datepicker-switch, .next, .prev {
 .login {
   background-color: black;
   padding: 20px 80px 40px 80px;
-}
-
-.home_events tr {
-  // padding-top: 10px;
 }
 
 
@@ -585,12 +571,10 @@ th.datepicker-switch, .next, .prev {
   }
 
   #date_home {
-    // background-color: red;
     color: red;
     text-transform: uppercase;
     padding-top: 5px;
     padding-bottom: 5px;
-    // margin-right: 0;
   }
 
 }

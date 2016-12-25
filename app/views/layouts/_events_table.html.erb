@@ -2,7 +2,7 @@
 
 <table>
   <% @events.each do |event| %>
-    <!-- Date and headline -->
+
     <tr class="events">
       <td id="date_red"><%= event.date %></td>
       <td id="name_listing"><%= event.name %></td>
@@ -12,12 +12,12 @@
                                   class: "delete", remote: true %></td>
       <% end %>
     </tr>
-    <!-- event details -->
+
     <tr>
       <td><br></td>
       <td><%= event.info %></td>
     </tr>
-    <!-- flyer -->
+
     <tr>
       <td><br></td>
       <% if event.flyer.file? %>

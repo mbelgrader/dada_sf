@@ -1,6 +1,5 @@
-  <div id="myCarousel" class="carousel slide" data-ride="carousel"
-    style="border-bottom:2px solid red">
-    <!-- Indicators -->
+    <div id="myCarousel" class="carousel slide red-border" data-ride="carousel">
+
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -22,10 +21,6 @@
       <div class="item">
         <%= image_tag src="cosmo.png", alt:"cosmo" %>
       </div>
-
-      <!-- <div class="item">
-        <%= image_tag src="car_art_tint.png", height: "200px", alt:"car artwork" %>
-      </div> -->
 
       <div class="item">
         <%= image_tag src="lamp_red.jpg", width: "100%", alt:"lamp" %>
@@ -53,7 +48,6 @@
         <tr>
           <td id="date_home"><%= event.date %></td>
           <td><%= event.name %></td>
-          <!-- <td><%= event.time %></td> -->
           <td><%= event.info %></td>
           <% if logged_in? %>
           <td><%= link_to "X", event, method: :delete,
@@ -67,8 +61,6 @@
 
 
   <!-- location map -->
-
-
       <div id="map-container">
         <div id="map-canvas"></div>
       </div>

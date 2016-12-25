@@ -30,7 +30,8 @@
 
           <%= f.select :size, ['Select Venue Size', 'Mezzanine only', 'Entire Venue'] %>
 
-          <%= f.text_field :info, placeholder: 'Please provide some information about the type of party or event.' %>
+          <%= f.text_area :info,
+                placeholder: 'Please provide some information about the type of party or event.' %>
 
           <%= f.submit "Request", class: "btn btn-primary" %>
       <% end %>
