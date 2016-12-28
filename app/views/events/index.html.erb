@@ -28,15 +28,15 @@
 <div class="row desktop events-list center">
 
   <!-- events list -->
-  <div class="col-xs-6" >
+  <div>
     <%= render 'layouts/events_table' %>
   </div>
 
   <!-- images list-->
-  <div class="col-xs-6" class="center" style="padding-top: 40px">
+  <div class="center" style="padding-top: 40px">
     <div>
         <% @photos.limit(30).each do |photo| %>
-          <li class="gallery"><%= image_tag photo.image.url(:medium) %></li>
+          <li class="gallery"><%= image_tag photo.image.url, class: 'events-image' %></li>
         <% end %>
     </div>
   </div>

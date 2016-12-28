@@ -35,6 +35,11 @@ div {
   background-color: $medium-red;
 }
 
+.events-image {
+  width: 300px;
+  height: auto;
+}
+
 /*header*/
 
 header {
@@ -171,6 +176,10 @@ li.dropdown {
 //   // background-size: cover;
 //   height: 80px;
 //   background-color: $medium-red;
+// }
+
+// .gallery-container {
+//   margin-left: 10px;
 // }
 
 .banner-heading {
@@ -517,6 +526,8 @@ th.datepicker-switch, .next, .prev {
 
   .events-list {
     margin: 20px 20px 0 20px;
+    display: flex;
+    justify-content: center;
   }
 
   #date_home {
@@ -578,4 +589,7 @@ th.datepicker-switch, .next, .prev {
     padding-bottom: 5px;
   }
 
+}
+
+@media only screen and (max-width: 1200px) {
 }
