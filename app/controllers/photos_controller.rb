@@ -7,7 +7,7 @@ class PhotosController < ApplicationController
 
   def new
     @photo = Photo.new
-    @photos = Photo.all
+    @photos = Photo.all.order(id: :desc)
   end
 
   def create
