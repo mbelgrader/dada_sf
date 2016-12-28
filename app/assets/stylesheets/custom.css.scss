@@ -411,12 +411,21 @@ input:focus:-webkit-autofill {
   }
 }
 
-#reserve_background {
-  background: image-url("better_liquor3.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+.reserve_background {
   height: 800px;
   min-height: 300px;
+}
+
+#private_party {
+  background: image-url("party_request.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#table_request {
+  background: image-url("table_request.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #reserve_dropdown {
